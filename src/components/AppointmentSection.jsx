@@ -9,7 +9,7 @@ import {
   Send, 
   MessageCircle, 
   ShieldCheck, 
-  Sparkles
+  Sparkles 
 } from 'lucide-react';
 import { DOCTOR_INFO } from '../data/physioData';
 
@@ -46,11 +46,11 @@ export default function AppointmentSection({ prefillCondition, prefillArea, pref
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14 sm:mb-18">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blush-100 text-navy-950 text-xs font-bold uppercase tracking-wider mb-3 border border-blush-200 shadow-2xs">
-            <Calendar className="w-3.5 h-3.5 text-gold-600" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-aqua-50 text-aqua-800 text-xs font-bold uppercase tracking-wider mb-3 border border-aqua-200 shadow-2xs">
+            <Calendar className="w-3.5 h-3.5 text-aqua-600" />
             <span>Consultation & Home Visits</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-4xl font-extrabold text-navy-950 tracking-tight font-heading">
+          <h2 className="text-3xl sm:text-4xl lg:text-4xl font-extrabold text-slate-900 tracking-tight font-heading">
             Book an Appointment with Dr. Ishika Gupta
           </h2>
           <p className="mt-3 text-sm sm:text-base text-slate-600 max-w-2xl mx-auto leading-relaxed">
@@ -58,18 +58,18 @@ export default function AppointmentSection({ prefillCondition, prefillArea, pref
           </p>
         </div>
 
-        {/* 2-Column Responsive Layout */}
+        {/* 2-Column Responsive CSS Grid (Zero absolute positioning) */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
           
           {/* Left Column: Direct Reach Card */}
           <div className="lg:col-span-5 space-y-6">
             
-            <div className="bg-gradient-to-br from-navy-950 via-navy-900 to-navy-950 text-white p-7 sm:p-9 rounded-3xl shadow-card border border-navy-800 space-y-6">
+            <div className="bg-slate-900 text-white p-7 sm:p-9 rounded-3xl shadow-card border border-slate-800 space-y-6">
               <div>
-                <span className="text-xs font-bold text-gold-400 uppercase tracking-widest">
+                <span className="text-xs font-bold text-aqua-400 uppercase tracking-widest">
                   Direct Clinical Reach
                 </span>
-                <h3 className="text-2xl font-extrabold text-white mt-1 font-heading">
+                <h3 className="text-2xl font-bold text-white mt-1 font-heading">
                   Get In Touch
                 </h3>
                 <p className="text-xs sm:text-sm text-slate-300 mt-1 leading-relaxed">
@@ -82,12 +82,12 @@ export default function AppointmentSection({ prefillCondition, prefillArea, pref
                 
                 {/* Phone */}
                 <div className="flex items-start gap-3.5 p-3.5 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors">
-                  <div className="w-10 h-10 rounded-xl bg-gold-400 text-navy-950 flex items-center justify-center shrink-0">
+                  <div className="w-10 h-10 rounded-xl bg-aqua-500 text-white flex items-center justify-center shrink-0">
                     <Phone className="w-5 h-5" />
                   </div>
                   <div>
                     <span className="text-[11px] text-slate-400 block">Phone & WhatsApp</span>
-                    <a href={`tel:${DOCTOR_INFO.phoneRaw}`} className="font-extrabold text-white text-base hover:text-gold-300 transition-colors">
+                    <a href={`tel:${DOCTOR_INFO.phoneRaw}`} className="font-extrabold text-white text-base hover:text-aqua-300 transition-colors">
                       {DOCTOR_INFO.phone}
                     </a>
                   </div>
@@ -95,12 +95,12 @@ export default function AppointmentSection({ prefillCondition, prefillArea, pref
 
                 {/* Email */}
                 <div className="flex items-start gap-3.5 p-3.5 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors">
-                  <div className="w-10 h-10 rounded-xl bg-emerald-400 text-navy-950 flex items-center justify-center shrink-0">
+                  <div className="w-10 h-10 rounded-xl bg-slate-800 text-aqua-400 flex items-center justify-center shrink-0">
                     <Mail className="w-5 h-5" />
                   </div>
                   <div>
                     <span className="text-[11px] text-slate-400 block">Official Email</span>
-                    <a href={`mailto:${DOCTOR_INFO.email}`} className="font-semibold text-white hover:text-emerald-300 transition-colors break-all">
+                    <a href={`mailto:${DOCTOR_INFO.email}`} className="font-semibold text-white hover:text-aqua-300 transition-colors break-all">
                       {DOCTOR_INFO.email}
                     </a>
                   </div>
@@ -108,7 +108,7 @@ export default function AppointmentSection({ prefillCondition, prefillArea, pref
 
                 {/* Working Hours */}
                 <div className="flex items-start gap-3.5 p-3.5 rounded-2xl bg-white/5 border border-white/10">
-                  <div className="w-10 h-10 rounded-xl bg-rose-400 text-navy-950 flex items-center justify-center shrink-0">
+                  <div className="w-10 h-10 rounded-xl bg-slate-800 text-aqua-400 flex items-center justify-center shrink-0">
                     <Clock className="w-5 h-5" />
                   </div>
                   <div>
@@ -124,7 +124,7 @@ export default function AppointmentSection({ prefillCondition, prefillArea, pref
 
                 {/* Service Areas */}
                 <div className="flex items-start gap-3.5 p-3.5 rounded-2xl bg-white/5 border border-white/10">
-                  <div className="w-10 h-10 rounded-xl bg-blue-400 text-navy-950 flex items-center justify-center shrink-0">
+                  <div className="w-10 h-10 rounded-xl bg-slate-800 text-aqua-400 flex items-center justify-center shrink-0">
                     <MapPin className="w-5 h-5" />
                   </div>
                   <div>
@@ -142,17 +142,17 @@ export default function AppointmentSection({ prefillCondition, prefillArea, pref
 
               {/* Council Reg note */}
               <div className="pt-2 border-t border-white/10 flex items-center gap-2 text-xs text-slate-300">
-                <ShieldCheck className="w-4 h-4 text-emerald-400 shrink-0" />
+                <ShieldCheck className="w-4 h-4 text-aqua-400 shrink-0" />
                 <span>Maharashtra OTPT Council Reg. No. 2023/12345</span>
               </div>
 
             </div>
 
             {/* Direct WhatsApp Callout */}
-            <div className="p-6 rounded-2xl bg-emerald-50 border border-emerald-200 text-emerald-950 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div className="p-6 rounded-2xl bg-aqua-50 border border-aqua-200 text-slate-900 flex flex-col sm:flex-row items-center justify-between gap-4">
               <div className="text-center sm:text-left">
-                <h4 className="font-extrabold text-sm font-heading">Prefer chatting on WhatsApp?</h4>
-                <p className="text-xs text-emerald-800 mt-0.5">
+                <h4 className="font-bold text-sm font-heading">Prefer chatting on WhatsApp?</h4>
+                <p className="text-xs text-slate-600 mt-0.5">
                   Send your prescription, MRI/X-ray reports, or query directly.
                 </p>
               </div>
@@ -171,23 +171,23 @@ export default function AppointmentSection({ prefillCondition, prefillArea, pref
 
           {/* Right Column: Interactive Booking Form */}
           <div className="lg:col-span-7">
-            <div className="glass-card p-6 sm:p-10 rounded-3xl relative">
+            <div className="glass-card p-6 sm:p-10 rounded-3xl relative bg-[#F7F9FA] border border-slate-200">
               
               {submitted ? (
                 <div className="py-12 text-center space-y-4 animate-fade-in-up">
                   <div className="w-16 h-16 mx-auto rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center">
                     <CheckCircle2 className="w-8 h-8" />
                   </div>
-                  <h3 className="text-2xl font-extrabold text-navy-950 font-heading">
+                  <h3 className="text-2xl font-bold text-slate-900 font-heading">
                     Appointment Request Received!
                   </h3>
                   <p className="text-sm text-slate-600 max-w-md mx-auto leading-relaxed">
-                    Thank you, <strong className="text-navy-950 font-bold">{formData.name}</strong>. Dr. Ishika Gupta’s clinic will contact you at <strong className="text-navy-950 font-bold">{formData.phone}</strong> shortly to confirm your {formData.serviceMode} slot in {formData.area}.
+                    Thank you, <strong className="text-slate-900 font-bold">{formData.name}</strong>. Dr. Ishika Gupta’s clinic will contact you at <strong className="text-slate-900 font-bold">{formData.phone}</strong> shortly to confirm your {formData.serviceMode} slot in {formData.area}.
                   </p>
                   <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-3">
                     <button
                       onClick={() => setSubmitted(false)}
-                      className="px-5 py-3 rounded-full font-bold text-xs text-navy-950 bg-white border border-slate-300 hover:bg-slate-50 transition-colors"
+                      className="px-5 py-3 rounded-full font-bold text-xs text-slate-900 bg-white border border-slate-300 hover:bg-slate-50 transition-colors"
                     >
                       Submit Another Request
                     </button>
@@ -203,16 +203,16 @@ export default function AppointmentSection({ prefillCondition, prefillArea, pref
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-4">
                   
-                  <div className="flex items-center justify-between pb-3 border-b border-blush-200">
+                  <div className="flex items-center justify-between pb-3 border-b border-slate-200">
                     <div>
-                      <h3 className="text-xl font-extrabold text-navy-950 font-heading">
+                      <h3 className="text-xl font-bold text-slate-900 font-heading">
                         Request Home Session / Consultation
                       </h3>
                       <p className="text-xs text-slate-500 mt-0.5">
                         Fill your details below or book directly with 1-click on WhatsApp.
                       </p>
                     </div>
-                    <span className="hidden sm:inline-flex items-center gap-1 text-[11px] font-bold text-gold-700 bg-gold-50 px-3 py-1 rounded-full border border-gold-200">
+                    <span className="hidden sm:inline-flex items-center gap-1 text-[11px] font-bold text-aqua-700 bg-aqua-50 px-3 py-1 rounded-full border border-aqua-200">
                       <Sparkles className="w-3 h-3" /> Quick Response
                     </span>
                   </div>
@@ -220,7 +220,7 @@ export default function AppointmentSection({ prefillCondition, prefillArea, pref
                   {/* Name & Phone */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-xs font-bold text-navy-950 mb-1.5">
+                      <label className="block text-xs font-bold text-slate-900 mb-1.5">
                         Patient / Requester Name *
                       </label>
                       <input
@@ -230,12 +230,12 @@ export default function AppointmentSection({ prefillCondition, prefillArea, pref
                         value={formData.name}
                         onChange={handleChange}
                         placeholder="e.g. Rahul Sharma"
-                        className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white text-navy-950 text-sm focus:outline-none focus:ring-2 focus:ring-gold-400"
+                        className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white text-slate-900 text-sm focus:outline-none focus:ring-2 focus:ring-aqua-500"
                       />
                     </div>
 
                     <div>
-                      <label className="block text-xs font-bold text-navy-950 mb-1.5">
+                      <label className="block text-xs font-bold text-slate-900 mb-1.5">
                         Phone Number (WhatsApp Preferred) *
                       </label>
                       <input
@@ -245,7 +245,7 @@ export default function AppointmentSection({ prefillCondition, prefillArea, pref
                         value={formData.phone}
                         onChange={handleChange}
                         placeholder="e.g. +91 98765 43210"
-                        className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white text-navy-950 text-sm focus:outline-none focus:ring-2 focus:ring-gold-400"
+                        className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white text-slate-900 text-sm focus:outline-none focus:ring-2 focus:ring-aqua-500"
                       />
                     </div>
                   </div>
@@ -253,14 +253,14 @@ export default function AppointmentSection({ prefillCondition, prefillArea, pref
                   {/* Area & Care Mode */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-xs font-bold text-navy-950 mb-1.5">
+                      <label className="block text-xs font-bold text-slate-900 mb-1.5">
                         Select Your Location (Mumbai) *
                       </label>
                       <select
                         name="area"
                         value={formData.area}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white text-navy-950 text-sm focus:outline-none focus:ring-2 focus:ring-gold-400 font-medium"
+                        className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white text-slate-900 text-sm focus:outline-none focus:ring-2 focus:ring-aqua-500 font-medium"
                       >
                         <option value="Sakinaka">Sakinaka (PIN 400072)</option>
                         <option value="Ghatkopar West">Ghatkopar West (PIN 400086)</option>
@@ -273,14 +273,14 @@ export default function AppointmentSection({ prefillCondition, prefillArea, pref
                     </div>
 
                     <div>
-                      <label className="block text-xs font-bold text-navy-950 mb-1.5">
+                      <label className="block text-xs font-bold text-slate-900 mb-1.5">
                         Care Type *
                       </label>
                       <select
                         name="serviceMode"
                         value={formData.serviceMode}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white text-navy-950 text-sm focus:outline-none focus:ring-2 focus:ring-gold-400 font-medium"
+                        className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white text-slate-900 text-sm focus:outline-none focus:ring-2 focus:ring-aqua-500 font-medium"
                       >
                         <option value="Home Visit Physiotherapy">Home Visit Physiotherapy (Bedside Care)</option>
                         <option value="Initial Clinical Assessment">Initial Clinical Assessment</option>
@@ -294,14 +294,14 @@ export default function AppointmentSection({ prefillCondition, prefillArea, pref
                   {/* Condition & Preferred Time */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-xs font-bold text-navy-950 mb-1.5">
+                      <label className="block text-xs font-bold text-slate-900 mb-1.5">
                         Primary Medical Condition *
                       </label>
                       <select
                         name="condition"
                         value={formData.condition}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white text-navy-950 text-sm focus:outline-none focus:ring-2 focus:ring-gold-400 font-medium"
+                        className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white text-slate-900 text-sm focus:outline-none focus:ring-2 focus:ring-aqua-500 font-medium"
                       >
                         <option value="Knee / Joint / Back Pain">Knee, Joint, Neck or Back Pain</option>
                         <option value="Osteoarthritis (OA) / RA">Osteoarthritis (OA) / Rheumatoid Arthritis</option>
@@ -316,14 +316,14 @@ export default function AppointmentSection({ prefillCondition, prefillArea, pref
                     </div>
 
                     <div>
-                      <label className="block text-xs font-bold text-navy-950 mb-1.5">
+                      <label className="block text-xs font-bold text-slate-900 mb-1.5">
                         Preferred Time Window
                       </label>
                       <select
                         name="preferredTime"
                         value={formData.preferredTime}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white text-navy-950 text-sm focus:outline-none focus:ring-2 focus:ring-gold-400 font-medium"
+                        className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white text-slate-900 text-sm focus:outline-none focus:ring-2 focus:ring-aqua-500 font-medium"
                       >
                         <option value="Morning (8:00 AM – 12:00 PM)">Morning (8:00 AM – 12:00 PM)</option>
                         <option value="Afternoon (12:00 PM – 4:00 PM)">Afternoon (12:00 PM – 4:00 PM)</option>
@@ -335,7 +335,7 @@ export default function AppointmentSection({ prefillCondition, prefillArea, pref
 
                   {/* Notes / Special requirements */}
                   <div>
-                    <label className="block text-xs font-bold text-navy-950 mb-1.5">
+                    <label className="block text-xs font-bold text-slate-900 mb-1.5">
                       Brief Description of Symptoms or Surgery Date (Optional)
                     </label>
                     <textarea
@@ -344,15 +344,15 @@ export default function AppointmentSection({ prefillCondition, prefillArea, pref
                       value={formData.notes}
                       onChange={handleChange}
                       placeholder="e.g. Severe knee pain while walking, or underwent knee replacement on 10th Nov..."
-                      className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white text-navy-950 text-sm focus:outline-none focus:ring-2 focus:ring-gold-400 resize-none leading-relaxed"
+                      className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white text-slate-900 text-sm focus:outline-none focus:ring-2 focus:ring-aqua-500 resize-none leading-relaxed"
                     ></textarea>
                   </div>
 
-                  {/* Action Pill Buttons with Hover Glow */}
+                  {/* Action Buttons */}
                   <div className="pt-2 grid grid-cols-1 sm:grid-cols-2 gap-3">
                     <button
                       type="submit"
-                      className="w-full btn-pill-gold py-3.5 px-4 text-xs sm:text-sm flex items-center justify-center gap-2"
+                      className="w-full btn-aqua py-3.5 px-4 text-xs sm:text-sm flex items-center justify-center gap-2"
                     >
                       <Send className="w-4 h-4" />
                       <span>Submit Booking Request</span>

@@ -31,11 +31,11 @@ export default function AppointmentModal({ isOpen, onClose, initialCondition, in
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-navy-950/75 backdrop-blur-md animate-fade-in-up">
-      <div className="relative w-full max-w-lg bg-white rounded-3xl shadow-2xl border border-blush-200 overflow-hidden max-h-[92vh] flex flex-col">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-slate-900/75 backdrop-blur-md animate-fade-in-up">
+      <div className="relative w-full max-w-lg bg-white rounded-3xl shadow-2xl border border-slate-200 overflow-hidden max-h-[92vh] flex flex-col">
         
         {/* Header */}
-        <div className="bg-gradient-to-r from-navy-950 via-navy-900 to-navy-950 text-white p-6 relative shrink-0">
+        <div className="bg-slate-900 text-white p-6 relative shrink-0">
           <button
             onClick={onClose}
             className="absolute top-5 right-5 text-slate-300 hover:text-white p-2 rounded-full hover:bg-white/10 transition-colors"
@@ -44,12 +44,12 @@ export default function AppointmentModal({ isOpen, onClose, initialCondition, in
             <X className="w-5 h-5" />
           </button>
 
-          <div className="flex items-center gap-2 text-gold-400 text-xs font-bold uppercase tracking-wider mb-1">
+          <div className="flex items-center gap-2 text-aqua-400 text-xs font-bold uppercase tracking-wider mb-1">
             <Calendar className="w-4 h-4" />
             <span>Fast Consultation Booking</span>
           </div>
 
-          <h3 className="text-xl sm:text-2xl font-extrabold text-white font-heading">
+          <h3 className="text-xl sm:text-2xl font-bold text-white font-heading">
             Schedule Care with Dr. Ishika Gupta
           </h3>
           <p className="text-xs text-slate-300 mt-1">
@@ -64,7 +64,7 @@ export default function AppointmentModal({ isOpen, onClose, initialCondition, in
               <div className="w-16 h-16 mx-auto rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center">
                 <CheckCircle2 className="w-8 h-8" />
               </div>
-              <h4 className="text-xl font-bold text-navy-950 font-heading">
+              <h4 className="text-xl font-bold text-slate-900 font-heading">
                 Request Submitted!
               </h4>
               <p className="text-xs sm:text-sm text-slate-600 max-w-sm mx-auto leading-relaxed">
@@ -90,7 +90,7 @@ export default function AppointmentModal({ isOpen, onClose, initialCondition, in
             <form onSubmit={handleSubmit} className="space-y-4">
               
               <div>
-                <label className="block text-xs font-bold text-navy-950 mb-1">
+                <label className="block text-xs font-bold text-slate-900 mb-1">
                   Full Name *
                 </label>
                 <input
@@ -100,12 +100,12 @@ export default function AppointmentModal({ isOpen, onClose, initialCondition, in
                   placeholder="Your Name"
                   value={formData.name}
                   onChange={handleChange}
-                  className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-gold-400"
+                  className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-aqua-500"
                 />
               </div>
 
               <div>
-                <label className="block text-xs font-bold text-navy-950 mb-1">
+                <label className="block text-xs font-bold text-slate-900 mb-1">
                   Phone Number (WhatsApp) *
                 </label>
                 <input
@@ -115,20 +115,20 @@ export default function AppointmentModal({ isOpen, onClose, initialCondition, in
                   placeholder="+91 98765 43210"
                   value={formData.phone}
                   onChange={handleChange}
-                  className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-gold-400"
+                  className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-aqua-500"
                 />
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <div>
-                  <label className="block text-xs font-bold text-navy-950 mb-1">
+                  <label className="block text-xs font-bold text-slate-900 mb-1">
                     Your Location *
                   </label>
                   <select
                     name="area"
                     value={formData.area}
                     onChange={handleChange}
-                    className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-xs focus:outline-none focus:ring-2 focus:ring-gold-400 font-medium"
+                    className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-xs focus:outline-none focus:ring-2 focus:ring-aqua-500 font-medium"
                   >
                     <option value="Sakinaka">Sakinaka (400072)</option>
                     <option value="Ghatkopar West">Ghatkopar West (400086)</option>
@@ -139,14 +139,14 @@ export default function AppointmentModal({ isOpen, onClose, initialCondition, in
                 </div>
 
                 <div>
-                  <label className="block text-xs font-bold text-navy-950 mb-1">
+                  <label className="block text-xs font-bold text-slate-900 mb-1">
                     Care Mode *
                   </label>
                   <select
                     name="service"
                     value={formData.service}
                     onChange={handleChange}
-                    className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-xs focus:outline-none focus:ring-2 focus:ring-gold-400 font-medium"
+                    className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-xs focus:outline-none focus:ring-2 focus:ring-aqua-500 font-medium"
                   >
                     <option value="Home Visit Physiotherapy">Home Visit (Bedside)</option>
                     <option value="Initial Consultation">Initial Consultation</option>
@@ -156,7 +156,7 @@ export default function AppointmentModal({ isOpen, onClose, initialCondition, in
               </div>
 
               <div>
-                <label className="block text-xs font-bold text-navy-950 mb-1">
+                <label className="block text-xs font-bold text-slate-900 mb-1">
                   Condition / Pain Area *
                 </label>
                 <input
@@ -165,12 +165,12 @@ export default function AppointmentModal({ isOpen, onClose, initialCondition, in
                   value={formData.condition}
                   onChange={handleChange}
                   placeholder="e.g. Knee pain, Frozen shoulder, Sciatica, Stroke rehab"
-                  className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-xs focus:outline-none focus:ring-2 focus:ring-gold-400"
+                  className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-xs focus:outline-none focus:ring-2 focus:ring-aqua-500"
                 />
               </div>
 
               <div>
-                <label className="block text-xs font-bold text-navy-950 mb-1">
+                <label className="block text-xs font-bold text-slate-900 mb-1">
                   Additional Notes (Optional)
                 </label>
                 <textarea
@@ -179,7 +179,7 @@ export default function AppointmentModal({ isOpen, onClose, initialCondition, in
                   value={formData.notes}
                   onChange={handleChange}
                   placeholder="Surgery date, doctor's referral or convenient time..."
-                  className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-xs focus:outline-none focus:ring-2 focus:ring-gold-400 resize-none leading-relaxed"
+                  className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-xs focus:outline-none focus:ring-2 focus:ring-aqua-500 resize-none leading-relaxed"
                 ></textarea>
               </div>
 
@@ -187,7 +187,7 @@ export default function AppointmentModal({ isOpen, onClose, initialCondition, in
               <div className="pt-2 space-y-2.5">
                 <button
                   type="submit"
-                  className="w-full btn-pill-gold py-3.5 text-xs sm:text-sm flex items-center justify-center gap-1.5"
+                  className="w-full btn-aqua py-3.5 text-xs sm:text-sm flex items-center justify-center gap-1.5"
                 >
                   <Send className="w-4 h-4" />
                   <span>Submit Booking Request</span>
@@ -204,7 +204,7 @@ export default function AppointmentModal({ isOpen, onClose, initialCondition, in
               </div>
 
               <div className="text-center pt-1 text-[11px] text-slate-500 flex items-center justify-center gap-1">
-                <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" />
+                <ShieldCheck className="w-3.5 h-3.5 text-aqua-600" />
                 <span>Your medical information is strictly confidential.</span>
               </div>
 

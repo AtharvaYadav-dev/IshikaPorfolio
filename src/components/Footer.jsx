@@ -6,7 +6,7 @@ import {
   Clock, 
   ShieldCheck, 
   ArrowRight, 
-  CheckCircle2
+  CheckCircle2 
 } from 'lucide-react';
 import { DOCTOR_INFO } from '../data/physioData';
 
@@ -24,34 +24,34 @@ export default function Footer({ onOpenBooking }) {
   };
 
   return (
-    <footer className="bg-navy-950 text-white pt-16 pb-28 lg:pb-12 border-t border-navy-800 relative">
+    <footer className="bg-slate-900 text-white pt-16 pb-28 lg:pb-12 border-t border-slate-800 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Top Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-10 pb-12 border-b border-navy-800">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-10 pb-12 border-b border-slate-800">
           
           {/* Col 1: Brand & Bio */}
           <div className="sm:col-span-2 lg:col-span-4 space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-11 h-11 rounded-2xl bg-gradient-to-tr from-gold-500 to-gold-400 flex items-center justify-center text-navy-950 shadow-md">
+              <div className="w-11 h-11 rounded-2xl bg-aqua-500 flex items-center justify-center text-white shadow-md">
                 <Activity className="w-6 h-6" />
               </div>
               <div>
                 <h3 className="font-extrabold text-xl text-white font-heading tracking-tight">
                   {DOCTOR_INFO.name}
                 </h3>
-                <p className="text-xs text-gold-400 font-semibold">
+                <p className="text-xs text-aqua-400 font-semibold">
                   {DOCTOR_INFO.degrees} • {DOCTOR_INFO.title}
                 </p>
               </div>
             </div>
 
             <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
-              Providing compassionate, personalized, and evidence-backed physiotherapy care for orthopedic, musculoskeletal, sports, and neurological conditions. Bringing clinical healing directly to your home.
+              Providing personalized, evidence-based physiotherapy care for orthopedic, musculoskeletal, sports, and neurological conditions. Bringing clinical healing directly to your home.
             </p>
 
-            <div className="p-3.5 rounded-2xl bg-navy-900 border border-navy-800 text-xs text-slate-300 space-y-1">
-              <div className="flex items-center gap-1.5 text-emerald-400 font-bold">
+            <div className="p-3.5 rounded-2xl bg-slate-800/80 border border-slate-700 text-xs text-slate-300 space-y-1">
+              <div className="flex items-center gap-1.5 text-aqua-400 font-bold">
                 <ShieldCheck className="w-4 h-4" />
                 <span>Verified Medical Credentials</span>
               </div>
@@ -69,7 +69,7 @@ export default function Footer({ onOpenBooking }) {
                   href="https://instagram.com" 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="w-10 h-10 rounded-xl bg-navy-900 border border-navy-800 flex items-center justify-center text-slate-300 hover:text-white hover:bg-rose-900/40 hover:border-rose-700 transition-colors"
+                  className="w-10 h-10 rounded-xl bg-slate-800 border border-slate-700 flex items-center justify-center text-slate-300 hover:text-white hover:bg-slate-700 transition-colors"
                   aria-label="Instagram"
                 >
                   <svg className="w-4 h-4 fill-none stroke-current stroke-2" viewBox="0 0 24 24">
@@ -83,7 +83,7 @@ export default function Footer({ onOpenBooking }) {
                   href="https://linkedin.com" 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="w-10 h-10 rounded-xl bg-navy-900 border border-navy-800 flex items-center justify-center text-slate-300 hover:text-white hover:bg-blue-900/40 hover:border-blue-700 transition-colors"
+                  className="w-10 h-10 rounded-xl bg-slate-800 border border-slate-700 flex items-center justify-center text-slate-300 hover:text-white hover:bg-slate-700 transition-colors"
                   aria-label="LinkedIn"
                 >
                   <svg className="w-4 h-4 fill-none stroke-current stroke-2" viewBox="0 0 24 24">
@@ -97,7 +97,7 @@ export default function Footer({ onOpenBooking }) {
                   href="https://youtube.com" 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="w-10 h-10 rounded-xl bg-navy-900 border border-navy-800 flex items-center justify-center text-slate-300 hover:text-white hover:bg-red-900/40 hover:border-red-700 transition-colors"
+                  className="w-10 h-10 rounded-xl bg-slate-800 border border-slate-700 flex items-center justify-center text-slate-300 hover:text-white hover:bg-slate-700 transition-colors"
                   aria-label="YouTube"
                 >
                   <svg className="w-4 h-4 fill-none stroke-current stroke-2" viewBox="0 0 24 24">
@@ -110,7 +110,7 @@ export default function Footer({ onOpenBooking }) {
                   href="https://facebook.com" 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="w-10 h-10 rounded-xl bg-navy-900 border border-navy-800 flex items-center justify-center text-slate-300 hover:text-white hover:bg-blue-950 hover:border-blue-700 transition-colors"
+                  className="w-10 h-10 rounded-xl bg-slate-800 border border-slate-700 flex items-center justify-center text-slate-300 hover:text-white hover:bg-slate-700 transition-colors"
                   aria-label="Facebook"
                 >
                   <svg className="w-4 h-4 fill-none stroke-current stroke-2" viewBox="0 0 24 24">
@@ -127,13 +127,13 @@ export default function Footer({ onOpenBooking }) {
               Quick Links
             </h4>
             <ul className="space-y-2 text-xs sm:text-sm text-slate-300">
-              <li><a href="#home" className="hover:text-gold-400 transition-colors">Home</a></li>
-              <li><a href="#about" className="hover:text-gold-400 transition-colors">About Dr. Ishika</a></li>
-              <li><a href="#treatments" className="hover:text-gold-400 transition-colors">Treatments Offered</a></li>
-              <li><a href="#conditions" className="hover:text-gold-400 transition-colors">Conditions Treated</a></li>
-              <li><a href="#home-visits" className="hover:text-gold-400 transition-colors">How Home Visits Work</a></li>
-              <li><a href="#service-areas" className="hover:text-gold-400 transition-colors">Mumbai Service Areas</a></li>
-              <li><a href="#contact" className="hover:text-gold-400 transition-colors">Contact & Appointment</a></li>
+              <li><a href="#home" className="hover:text-aqua-400 transition-colors">Home</a></li>
+              <li><a href="#about" className="hover:text-aqua-400 transition-colors">About Dr. Ishika</a></li>
+              <li><a href="#treatments" className="hover:text-aqua-400 transition-colors">Treatments</a></li>
+              <li><a href="#conditions" className="hover:text-aqua-400 transition-colors">Conditions</a></li>
+              <li><a href="#home-visits" className="hover:text-aqua-400 transition-colors">Home Visits</a></li>
+              <li><a href="#service-areas" className="hover:text-aqua-400 transition-colors">Service Areas</a></li>
+              <li><a href="#contact" className="hover:text-aqua-400 transition-colors">Contact</a></li>
             </ul>
           </div>
 
@@ -143,19 +143,19 @@ export default function Footer({ onOpenBooking }) {
               Home Visit Localities
             </h4>
             <div className="space-y-2 text-xs text-slate-300">
-              <div className="p-2.5 rounded-xl bg-navy-900 border border-navy-800">
+              <div className="p-2.5 rounded-xl bg-slate-800 border border-slate-700">
                 <strong className="text-white block font-bold text-xs">Sakinaka (PIN 400072)</strong>
                 <span className="text-[11px] text-slate-400">Metro Station, 90ft Road & surroundings</span>
               </div>
-              <div className="p-2.5 rounded-xl bg-navy-900 border border-navy-800">
+              <div className="p-2.5 rounded-xl bg-slate-800 border border-slate-700">
                 <strong className="text-white block font-bold text-xs">Ghatkopar West (PIN 400086)</strong>
                 <span className="text-[11px] text-slate-400">LBS Marg, Amrut Nagar, Station Area</span>
               </div>
-              <div className="p-2.5 rounded-xl bg-navy-900 border border-navy-800">
+              <div className="p-2.5 rounded-xl bg-slate-800 border border-slate-700">
                 <strong className="text-white block font-bold text-xs">Kurla West (PIN 400070)</strong>
                 <span className="text-[11px] text-slate-400">Phoenix Marketcity, CST Road</span>
               </div>
-              <div className="p-2.5 rounded-xl bg-navy-900 border border-navy-800">
+              <div className="p-2.5 rounded-xl bg-slate-800 border border-slate-700">
                 <strong className="text-white block font-bold text-xs">Vidyavihar (PIN 400077)</strong>
                 <span className="text-[11px] text-slate-400">Somaiya Campus, Station Area</span>
               </div>
@@ -169,21 +169,21 @@ export default function Footer({ onOpenBooking }) {
             </h4>
 
             <div className="space-y-2.5 text-xs sm:text-sm text-slate-300">
-              <a href={`tel:${DOCTOR_INFO.phoneRaw}`} className="flex items-center gap-2 hover:text-gold-400 transition-colors">
-                <Phone className="w-4 h-4 text-gold-400 shrink-0" />
+              <a href={`tel:${DOCTOR_INFO.phoneRaw}`} className="flex items-center gap-2 hover:text-aqua-400 transition-colors">
+                <Phone className="w-4 h-4 text-aqua-400 shrink-0" />
                 <span className="font-bold text-white">{DOCTOR_INFO.phone}</span>
               </a>
-              <a href={`mailto:${DOCTOR_INFO.email}`} className="flex items-center gap-2 hover:text-gold-400 transition-colors break-all">
-                <Mail className="w-4 h-4 text-emerald-400 shrink-0" />
+              <a href={`mailto:${DOCTOR_INFO.email}`} className="flex items-center gap-2 hover:text-aqua-400 transition-colors break-all">
+                <Mail className="w-4 h-4 text-aqua-400 shrink-0" />
                 <span>{DOCTOR_INFO.email}</span>
               </a>
               <div className="flex items-start gap-2 pt-1 text-slate-400 text-xs">
-                <Clock className="w-4 h-4 text-rose-400 shrink-0 mt-0.5" />
+                <Clock className="w-4 h-4 text-aqua-400 shrink-0 mt-0.5" />
                 <span>{DOCTOR_INFO.workingHours}</span>
               </div>
             </div>
 
-            {/* Quick Callback Mini Form */}
+            {/* Quick Callback Form */}
             <div className="pt-2">
               <span className="text-[11px] font-bold text-slate-300 block mb-1.5">
                 Request an Immediate Callback:
@@ -201,11 +201,11 @@ export default function Footer({ onOpenBooking }) {
                     placeholder="Your Phone Number"
                     value={quickPhone}
                     onChange={(e) => setQuickPhone(e.target.value)}
-                    className="flex-1 px-3.5 py-2.5 bg-navy-900 border border-navy-700 rounded-xl text-white placeholder-slate-500 text-xs focus:outline-none focus:border-gold-400"
+                    className="flex-1 px-3.5 py-2.5 bg-slate-800 border border-slate-700 rounded-xl text-white placeholder-slate-500 text-xs focus:outline-none focus:border-aqua-400"
                   />
                   <button
                     type="submit"
-                    className="btn-pill-gold px-4 py-2.5 text-xs shrink-0 flex items-center gap-1"
+                    className="btn-aqua px-4 py-2.5 text-xs shrink-0 flex items-center gap-1"
                   >
                     <span>Call Me</span>
                     <ArrowRight className="w-3 h-3" />

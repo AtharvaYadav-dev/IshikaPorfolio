@@ -8,33 +8,33 @@ export default function TrustStats() {
       value: "Reg. 2023/12345",
       subtitle: "Maharashtra State OTPT Council",
       icon: ShieldCheck,
-      color: "text-emerald-700 bg-emerald-50 border-emerald-200"
+      color: "text-aqua-700 bg-aqua-50 border-aqua-200"
     },
     {
       title: "Patients Recovered",
       value: "1,200+ Recoveries",
       subtitle: "Ortho, Neuro & Post-Op Care",
       icon: Award,
-      color: "text-gold-700 bg-gold-50 border-gold-200"
+      color: "text-slate-800 bg-slate-100 border-slate-200"
     },
     {
       title: "Home Visits Completed",
       value: "3,500+ Visits",
       subtitle: "Across Central Mumbai",
       icon: Users,
-      color: "text-navy-700 bg-navy-50 border-navy-200"
+      color: "text-aqua-700 bg-aqua-50 border-aqua-200"
     },
     {
       title: "Dedicated Attention",
       value: "1-on-1 Bedside",
       subtitle: "Undivided 45-60 Min Sessions",
       icon: HeartHandshake,
-      color: "text-rose-700 bg-blush-100 border-blush-200"
+      color: "text-slate-800 bg-slate-100 border-slate-200"
     }
   ];
 
   return (
-    <section className="bg-white py-10 border-b border-blush-200/60">
+    <section className="bg-[#F7F9FA] py-10 border-b border-slate-200/60">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {highlights.map((item, idx) => {
@@ -42,16 +42,16 @@ export default function TrustStats() {
             return (
               <div 
                 key={idx} 
-                className="glass-card p-5 rounded-2xl flex items-center gap-4 text-left group"
+                className="glass-card p-5 rounded-2xl flex items-center gap-4 text-left group bg-white"
               >
-                <div className={`w-13 h-13 rounded-2xl flex items-center justify-center shrink-0 border ${item.color} group-hover:scale-110 transition-transform duration-200`}>
+                <div className={`w-13 h-13 rounded-2xl flex items-center justify-center shrink-0 border ${item.color} group-hover:scale-105 transition-transform duration-200`}>
                   <IconComponent className="w-6 h-6" />
                 </div>
                 <div>
-                  <div className="text-xl font-extrabold text-navy-950 tracking-tight leading-tight">
+                  <div className="text-xl font-extrabold text-slate-900 tracking-tight leading-tight font-heading">
                     {item.value}
                   </div>
-                  <div className="text-xs font-bold text-navy-800 mt-0.5">
+                  <div className="text-xs font-bold text-slate-700 mt-0.5">
                     {item.title}
                   </div>
                   <div className="text-[11px] text-slate-500 font-medium">

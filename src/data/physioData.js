@@ -8,11 +8,11 @@ export const DOCTOR_INFO = {
   phone: "+91 9987299842",
   phoneRaw: "+919987299842",
   whatsappNumber: "919987299842",
-  primaryTagline: "Restoring Movement. Reviving Lives.",
-  secondaryTagline: "Better Movement. Brighter Days.",
+  primaryTagline: "Better Movement. Brighter Days.",
+  heroText: "Personalized, evidence-based physiotherapy care at your comfort.",
   experienceYears: "5+ Years Clinical Experience",
-  bio: "Dr. Ishika Gupta is a qualified physiotherapist providing personalized physiotherapy care for orthopedic, musculoskeletal, sports, and neurological conditions. I provide evidence-based treatment focused on pain management, mobility, strength, and functional recovery. Treatment plans are individualized based on each patient’s condition, goals, and functional needs.",
-  shortBio: "Specializing in orthopedic rehabilitation, neurological recovery, pain relief, and home-based clinical physiotherapy across Central Mumbai.",
+  bio: "Dr. Ishika Gupta is a qualified physiotherapist providing personalized care for orthopedic, musculoskeletal, sports, and neurological conditions. Focused on pain management, mobility, strength, and functional recovery.",
+  credentialsDetail: "BPT, Maharashtra OTPT Council Registration No.: 2023/12345",
   workingHours: "Monday to Saturday: 8:00 AM – 8:00 PM | Sunday: By Prior Appointment",
   serviceAreas: [
     { name: "Sakinaka", pin: "400072", travelTime: "15-20 mins", landmark: "Metro Station & 90ft Road" },
@@ -21,47 +21,45 @@ export const DOCTOR_INFO = {
     { name: "Vidyavihar", pin: "400077", travelTime: "10-20 mins", landmark: "Somaiya Campus & Station Road" },
   ],
   stats: [
-    { label: "Patients Rehabilitated", value: "1,200+", description: "Successfully recovered without hospital stay" },
-    { label: "Home Visits Completed", value: "3,500+", description: "Comfortable recovery in home setting" },
-    { label: "Patient Satisfaction", value: "99.4%", description: "Verified positive clinical feedback" },
-    { label: "Clinical Precision", value: "100%", description: "Evidence-based customized protocols" }
+    { label: "Patients Rehabilitated", value: "1,200+", description: "Recovered with personalized bedside care" },
+    { label: "Home Visits Completed", value: "3,500+", description: "In-home therapy across Central Mumbai" },
+    { label: "Patient Satisfaction", value: "99.4%", description: "Verified positive clinical recovery" },
+    { label: "Evidence-Based Care", value: "100%", description: "Protocol-driven rehabilitation" }
   ]
 };
 
 export const CORE_SERVICES = [
-  {
-    id: "manual-therapy",
-    title: "Manual Therapy",
-    tagline: "Hands-on Joint & Tissue Mobilization",
-    icon: "HandHeart",
-    badge: "Specialized Technique",
-    shortDesc: "Specialized hands-on clinical manipulation and mobilization of joints and soft tissues to restore natural motion and relieve stiff joints.",
-    fullDesc: "Manual therapy employs skilled, passive movements of joints and soft tissue structures to decrease pain, increase range of motion, reduce myofascial tension, and induce deep muscle relaxation.",
-    benefits: [
-      "Immediate joint stiffness reduction",
-      "Spinal articulation and decompression",
-      "Restoration of natural anatomical gliding",
-      "Reduces dependency on oral pain medications"
-    ],
-    idealFor: ["Frozen shoulder", "Cervical stiffness", "Facet joint lock", "Lumbar disc issues"],
-    equipmentUsed: "Specialized mobilization belts & ergonomic clinical positioning"
-  },
   {
     id: "exercise-therapy",
     title: "Exercise Therapy",
     tagline: "Active Strengthening & Functional Restoration",
     icon: "Activity",
     badge: "Core Recovery",
-    shortDesc: "Targeted therapeutic exercises designed to rebuild core stability, neuromuscular balance, joint endurance, and functional stamina.",
-    fullDesc: "Prescribed medical exercise regimens tailored specifically to your body's current tolerance level, focusing on eccentric control, proprioception, kinetic chain balance, and progressive overload.",
+    shortDesc: "Targeted therapeutic exercises designed to rebuild core stability, joint endurance, muscular balance, and functional independence.",
     benefits: [
-      "Rebuilds weakened stabilizing muscles",
+      "Rebuilds weakened stabilizing muscle groups",
+      "Corrects muscular imbalances & faulty posture",
       "Prevents recurring slips, strains, and falls",
-      "Improves endurance for daily chores and sports",
-      "Corrects muscular imbalances & faulty posture"
+      "Restores endurance for daily living activities"
     ],
-    idealFor: ["Post-operative muscle atrophy", "Knee Osteoarthritis", "Scoliosis / Kyphosis", "General debility"],
-    equipmentUsed: "Resistance thera-bands, loop bands, stability discs, weights"
+    idealFor: ["Post-operative recovery", "Knee Osteoarthritis", "Weak stabilizing muscles", "Postural rehabilitation"],
+    equipmentUsed: "Resistance thera-bands, stability loops, balance mats"
+  },
+  {
+    id: "manual-therapy",
+    title: "Manual Therapy",
+    tagline: "Hands-on Joint & Tissue Mobilization",
+    icon: "HandHeart",
+    badge: "Clinical Specialty",
+    shortDesc: "Skilled passive mobilization and manipulation of joints and soft tissues to restore natural anatomical gliding and relieve stubborn joint stiffness.",
+    benefits: [
+      "Immediate reduction in joint stiffness",
+      "Spinal articulation and decompression",
+      "Restoration of full physiological range of motion",
+      "Reduces reliance on oral analgesics"
+    ],
+    idealFor: ["Frozen shoulder", "Cervical spine stiffness", "Facet joint dysfunction", "Lumbar pain"],
+    equipmentUsed: "Specialized mobilization belts & ergonomic clinical positioning"
   },
   {
     id: "mfr",
@@ -69,32 +67,30 @@ export const CORE_SERVICES = [
     tagline: "Deep Fascial Tension Decompression",
     icon: "Layers",
     badge: "Pain Relief",
-    shortDesc: "Gentle sustained pressure into myofascial connective tissue restrictions to eliminate pain and restore pain-free movement.",
-    fullDesc: "Trauma, inflammatory responses, and surgical procedures can cause tight fascial restrictions exerting excessive pressure upon nerves and blood vessels. MFR slowly elongates restricted fascia.",
+    shortDesc: "Gentle sustained pressure into myofascial connective tissue restrictions to eliminate chronic muscle tension, knots, and radiating aches.",
     benefits: [
-      "Releases stubborn trigger points & muscle knots",
-      "Increases blood flow to oxygen-starved muscles",
-      "Alleviates radiating tension headaches & back spasms",
-      "Enhances tissue flexibility without traumatic force"
+      "Releases deep stubborn trigger points and knots",
+      "Increases local micro-circulation in restricted tissues",
+      "Alleviates radiating tension headaches and spasms",
+      "Restores tissue elasticity without aggressive force"
     ],
-    idealFor: ["Trapezius muscle spasm", "Sciatica trigger points", "Fibromyalgia tender points", "Chronic back pain"],
-    equipmentUsed: "Targeted ischemic pressure tools & soft tissue release lubricants"
+    idealFor: ["Trapezius muscle spasms", "Sciatica trigger points", "Chronic back tightness", "Fibromyalgia"],
+    equipmentUsed: "Targeted ischemic release techniques & medical grade emollients"
   },
   {
     id: "kinesio-taping",
     title: "Kinesio Taping",
     tagline: "Neuromuscular Support & Decompression",
     icon: "ShieldAlert",
-    badge: "Sports & Rehab",
-    shortDesc: "Elastic therapeutic tape applied strategically to support muscles, stabilize joints, and accelerate lymphatic drainage.",
-    fullDesc: "Specialized medical-grade elastic cotton tape that mimics human skin elasticity, lifting microscopic skin layers to facilitate lymphatic clearance and providing continuous proprioceptive feedback.",
+    badge: "Sports & Stability",
+    shortDesc: "Elastic therapeutic tape applied strategically to support muscles, stabilize vulnerable joints, and facilitate continuous lymphatic drainage.",
     benefits: [
-      "Continuous support 24/7 during normal activities",
-      "Accelerates hematoma and edema absorption",
-      "Relieves pressure on pain receptors",
-      "Stabilizes weak patella, ankle, or shoulder without restricting motion"
+      "Continuous support 24/7 during daily activities",
+      "Accelerates edema and swelling clearance",
+      "Relieves pressure on cutaneous pain receptors",
+      "Stabilizes weak patella or ankle without restricting motion"
     ],
-    idealFor: ["Runner's knee", "Sprained ankles", "Tennis elbow", "Postural stabilization"],
+    idealFor: ["Runner's knee", "Ankle sprains", "Tennis elbow", "Postural alignment"],
     equipmentUsed: "Hypoallergenic, water-resistant medical Kinesiology tape"
   },
   {
@@ -102,89 +98,63 @@ export const CORE_SERVICES = [
     title: "Cupping Therapy",
     tagline: "Myofascial Decompression & Micro-Circulation",
     icon: "Sparkles",
-    badge: "High Demand",
-    shortDesc: "Negative pressure vacuum therapy applied to tight muscle groups to stimulate micro-circulation and break deep adhesions.",
-    fullDesc: "Dry medical cupping uses suction cups to draw interstitial fluid into tissues, breaking micro-adhesions in stubborn muscles, releasing stagnant metabolites, and drastically accelerating tissue repair.",
+    badge: "Rapid Recovery",
+    shortDesc: "Negative pressure vacuum therapy applied to tight muscle groups to stimulate blood flow, break micro-adhesions, and accelerate recovery.",
     benefits: [
       "Rapid relief from chronic tightness and back aches",
       "Enhances cellular repair through hyperaemia",
-      "Releases deep tight fascial layers unattainable by fingers alone",
-      "Great for athletes and desk workers suffering postural fatigue"
+      "Releases deep tight fascial layers",
+      "Excellent for desk workers and athletes with postural fatigue"
     ],
-    idealFor: ["Upper back knots", "Hamstring tightness", "IT band friction syndrome", "Lumbar stiffness"],
+    idealFor: ["Upper back stiffness", "Hamstring tight bands", "IT band syndrome", "Lumbar stiffness"],
     equipmentUsed: "Sterilized clinical vacuum suction cups & skin protective serums"
   },
   {
     id: "electrotherapy",
-    title: "Electrotherapy (TENS, IFT, US, SWD)",
+    title: "Electrotherapy (TENS, IFT, Ultrasound)",
     tagline: "Advanced Modality Pain Gating & Healing",
     icon: "Zap",
-    badge: "Medical Tech",
-    shortDesc: "Portable electro-physical modalities (TENS, IFT, Therapeutic Ultrasound, SWD) brought to your home for non-invasive pain relief.",
-    fullDesc: "Targeted application of therapeutic electrical currents and acoustic sound waves to block pain pathways (Pain Gate Mechanism), stimulate endorphin release, and accelerate deep tissue cellular repair.",
+    badge: "Advanced Tech",
+    shortDesc: "Portable electro-physical modalities (TENS for pain gating, IFT for deep neuromuscular stimulation, and Ultrasound for tissue healing) brought to your home.",
     benefits: [
-      "Swift symptomatic pain relief without side effects",
-      "Interferential current (IFT) penetrates deep muscle groups",
-      "Therapeutic Ultrasound softens scar tissue & reduces acute swelling",
-      "Accelerates bone and tendon healing phases"
+      "Fast, non-invasive symptomatic pain reduction",
+      "IFT penetrates deep muscle and pelvic structures",
+      "Therapeutic Ultrasound softens scar tissue & decreases swelling",
+      "Triggers natural endorphin analgesia"
     ],
-    idealFor: ["Acute sprains", "Severe sciatica", "Calcaneal spur / Plantar fasciitis", "Arthritic flare-ups"],
-    equipmentUsed: "Calibrated portable TENS/IFT combi-units & Therapeutic Ultrasound heads"
-  },
-  {
-    id: "post-op-rehab",
-    title: "Post-Surgical Rehabilitation",
-    tagline: "Structured Protocol-Driven Recovery",
-    icon: "HeartPulse",
-    badge: "Clinical Specialty",
-    shortDesc: "Tailored phased rehabilitation after orthopedic, spinal, or trauma surgery to safely regain full functional independence.",
-    fullDesc: "Working in close alignment with your operating orthopedic surgeon’s protocol, Dr. Ishika safely guides you through early mobilization, weight-bearing progression, gait training, and final functional recovery.",
-    benefits: [
-      "Prevents post-operative joint stiffness and DVT risks",
-      "Safely restores knee/hip flexion and extension degrees",
-      "Home gait training with walker, crutches, or cane",
-      "Minimizes post-surgical fear of movement (kinesiophobia)"
-    ],
-    idealFor: ["Total Knee Replacement (TKR)", "Total Hip Replacement (THR)", "ACL Reconstruction", "Spine Discectomy / Fusion"],
-    equipmentUsed: "Goniometers, cryo-gel packs, balance mats, mobility aids"
+    idealFor: ["Acute ligament sprains", "Severe sciatica", "Plantar fasciitis", "Arthritic flare-ups"],
+    equipmentUsed: "Calibrated portable TENS/IFT units & Therapeutic Ultrasound heads"
   }
 ];
 
 export const CONDITIONS_TREATED = [
   {
     category: "Orthopedic",
-    title: "Osteoarthritis (OA) & Rheumatoid Arthritis (RA)",
+    title: "Osteoarthritis (OA) & Rheumatoid Arthritis",
     description: "Joint preservation therapy, pain modulation, quadriceps/hamstring strengthening, and cartilage unload strategies.",
-    commonSymptoms: "Morning stiffness, knee cracking (crepitus), swelling, difficulty climbing stairs.",
+    commonSymptoms: "Morning stiffness, knee cracking, joint swelling, difficulty climbing stairs.",
     icon: "Bone"
   },
   {
     category: "Orthopedic",
-    title: "Knee, Hip, Neck & Back Pain",
+    title: "Knee, Neck & Back Pain",
     description: "Targeted spinal decompression, core muscle stabilization, ergonomic posture correction, and sciatica relief.",
-    commonSymptoms: "Radiating leg pain, sharp lower back pinch, neck spasm after long laptop hours.",
+    commonSymptoms: "Radiating leg pain, sharp lower back pinch, neck spasm after long hours at computer.",
     icon: "Crosshair"
   },
   {
     category: "Orthopedic",
     title: "Frozen Shoulder (Adhesive Capsulitis)",
     description: "Multiphase capsular stretching, gentle joint glide mobilization, and progressive pain-free reach restoration.",
-    commonSymptoms: "Night shoulder ache, inability to reach behind back, severe restriction lifting arm.",
+    commonSymptoms: "Night shoulder ache, inability to reach behind back, severe restriction lifting arm overhead.",
     icon: "UserCheck"
   },
   {
     category: "Orthopedic",
     title: "Sciatica & Disc Bulge",
     description: "Nerve flossing / neurodynamics, directional preference exercises (McKenzie approach), and muscle spasm release.",
-    commonSymptoms: "Shooting electric sensations down hip and calf, tingling toes, numbness sitting.",
+    commonSymptoms: "Shooting electric sensations down hip and calf, tingling toes, numbness while sitting.",
     icon: "ShieldAlert"
-  },
-  {
-    category: "Orthopedic",
-    title: "Postural Problems & Cervicogenic Headaches",
-    description: "Forward head posture correction, thoracic spine mobilization, ergonomic workstation counseling.",
-    commonSymptoms: "Tension headaches, rounded shoulders, upper trapezius stiffness, mid-back burning.",
-    icon: "Smile"
   },
   {
     category: "Neurological",
@@ -204,36 +174,29 @@ export const CONDITIONS_TREATED = [
     category: "Other",
     title: "Sports Injuries & Ligament Strains",
     description: "Ligament sprain recovery (ACL/MCL/Ankle), tennis elbow, rotator cuff tendinitis, and return-to-sport testing.",
-    commonSymptoms: "Sudden joint twist, localized inflammation, pain with high exertion.",
+    commonSymptoms: "Sudden joint twist, localized inflammation, pain with exertion.",
     icon: "Flame"
   },
   {
     category: "Other",
     title: "Post-Operative Rehabilitation",
-    description: "Accelerated yet safe recovery following Total Knee/Hip Replacement, fracture fixations, and spinal surgeries.",
-    commonSymptoms: "Surgical edema, reduced joint range, fear of putting weight on the operated leg.",
+    description: "Safe, accelerated recovery following Total Knee/Hip Replacement (TKR/THR), fracture fixations, and spine surgeries.",
+    commonSymptoms: "Surgical edema, reduced joint range, fear of putting weight on operated leg.",
     icon: "HeartPulse"
   },
   {
     category: "Other",
-    title: "Geriatric & Senior Citizen Care",
-    description: "Gentle mobility maintenance, safe balance training, osteoporosis management, and independent living support.",
-    commonSymptoms: "Fear of falling, progressive muscle wasting (sarcopenia), general joint stiffness.",
-    icon: "HeartHandshake"
-  },
-  {
-    category: "Other",
-    title: "Cardiac & Respiratory Conditions",
-    description: "Chest physiotherapy, breathing exercises (active cycle of breathing), post-pneumonia reconditioning, and endurance building.",
-    commonSymptoms: "Shortness of breath on mild exertion, chest congestion, low physical stamina.",
-    icon: "Wind"
-  },
-  {
-    category: "Other",
-    title: "Muscle Pain, Spasms & Myofascial Triggers",
+    title: "Muscle Strain & Spasms",
     description: "Dry cupping, MFR, ultrasound heating, and stretch protocols for desk-workers and repetitive stress sufferers.",
-    commonSymptoms: "Painful muscle knots, localized tenderness, restricted flexibility.",
+    commonSymptoms: "Painful muscle knots, localized tenderness, restricted movement.",
     icon: "Zap"
+  },
+  {
+    category: "Other",
+    title: "Geriatric & Cardiac Rehabilitation",
+    description: "Gentle mobility maintenance, safe balance training, chest physiotherapy, and endurance reconditioning for seniors.",
+    commonSymptoms: "Fear of falling, decreased physical stamina, progressive joint stiffness.",
+    icon: "HeartHandshake"
   }
 ];
 
@@ -289,7 +252,7 @@ export const TESTIMONIALS = [
     id: 3,
     patientName: "Anandita Mukherjee",
     age: 51,
-    area: "Vidyavihar East/West",
+    area: "Vidyavihar",
     condition: "Frozen Shoulder (Stage 2)",
     rating: 5,
     quote: "I couldn't tie my hair or reach behind my back for over 5 months. Dr. Ishika used gentle joint mobilization and cupping therapy. She never forced painful movements and gave clear homework exercises. Today my shoulder movement is completely back!",
@@ -309,8 +272,8 @@ export const TESTIMONIALS = [
 
 export const FAQ_ITEMS = [
   {
-    q: "Why should I choose Home Visit Physiotherapy instead of a clinic?",
-    a: "When dealing with acute joint pain, post-surgical recovery (like knee or hip replacement), or neurological issues, traveling through Mumbai traffic worsens pain and risks re-injury. Home visits provide one-on-one undivided attention in your comfortable environment, allow the doctor to assess your real-life home ergonomics (bed height, chair, stairs), and save valuable time for family members."
+    q: "Why should I choose Home Visit Physiotherapy instead of visiting a clinic?",
+    a: "When dealing with acute joint pain, post-surgical recovery (like knee or hip replacement), or neurological conditions, traveling through Mumbai traffic aggravates pain and increases risk. Home visits provide dedicated 1-on-1 attention in your comfortable environment, allow evaluation of real home ergonomics, and save valuable time."
   },
   {
     q: "What equipment does Dr. Ishika bring for home sessions?",
@@ -318,11 +281,11 @@ export const FAQ_ITEMS = [
   },
   {
     q: "Which specific areas in Mumbai do you cover for home visits?",
-    a: "Home visits are currently focused in Central Mumbai: Sakinaka, Ghatkopar West, Kurla West, and Vidyavihar. If you reside in closely adjacent areas (like Ghatkopar East, Asalpha, or Chandivali), please contact us to check feasibility."
+    a: "Home visits are actively provided in Central Mumbai: Sakinaka, Ghatkopar West, Kurla West, and Vidyavihar. Adjacent locations like Ghatkopar East, Asalpha, and Chandivali are also accommodated upon prior schedule confirmation."
   },
   {
     q: "How long does a typical physiotherapy session last?",
-    a: "Each session lasts approximately 45 to 60 minutes. The first appointment includes a comprehensive 15–20 minute clinical examination, movement tests, and goal setting followed by initial therapeutic intervention."
+    a: "Each session lasts approximately 45 to 60 minutes. The first appointment includes a comprehensive clinical examination, joint tests, and customized goal setting followed by initial therapeutic treatment."
   },
   {
     q: "Do you provide medical bills/receipts for health insurance reimbursement?",

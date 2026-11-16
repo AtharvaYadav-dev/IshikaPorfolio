@@ -9,11 +9,11 @@ export default function Testimonials({ onOpenBooking }) {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14 sm:mb-18">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blush-100 text-navy-950 text-xs font-bold uppercase tracking-wider mb-3 border border-blush-200 shadow-2xs">
-            <Star className="w-3.5 h-3.5 text-gold-600 fill-gold-500" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-aqua-50 text-aqua-800 text-xs font-bold uppercase tracking-wider mb-3 border border-aqua-200">
+            <Star className="w-3.5 h-3.5 text-aqua-600 fill-aqua-500" />
             <span>Verified Patient Outcomes</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-4xl font-extrabold text-navy-950 tracking-tight font-heading">
+          <h2 className="text-3xl sm:text-4xl lg:text-4xl font-extrabold text-slate-900 tracking-tight font-heading">
             Real Stories of Movement & Recovery
           </h2>
           <p className="mt-3 text-sm sm:text-base text-slate-600 max-w-2xl mx-auto leading-relaxed">
@@ -26,7 +26,7 @@ export default function Testimonials({ onOpenBooking }) {
           {TESTIMONIALS.map((item) => (
             <div
               key={item.id}
-              className="glass-card p-6 sm:p-8 rounded-3xl flex flex-col justify-between"
+              className="glass-card p-6 sm:p-8 rounded-3xl flex flex-col justify-between bg-white border border-slate-200 hover:border-aqua-400"
             >
               <div>
                 {/* Rating & Location Tag */}
@@ -37,15 +37,15 @@ export default function Testimonials({ onOpenBooking }) {
                     ))}
                   </div>
 
-                  <span className="flex items-center gap-1 text-xs font-bold text-navy-950 bg-white px-3 py-1 rounded-full border border-slate-200 shadow-2xs">
-                    <MapPin className="w-3 h-3 text-rose-500" />
+                  <span className="flex items-center gap-1 text-xs font-bold text-slate-900 bg-slate-50 px-3 py-1 rounded-full border border-slate-200">
+                    <MapPin className="w-3 h-3 text-aqua-600" />
                     {item.area}
                   </span>
                 </div>
 
                 {/* Condition Treated Tag */}
                 <div className="mb-3">
-                  <span className="inline-block text-xs font-bold text-navy-950 bg-blush-100/90 px-3 py-1 rounded-xl border border-blush-200">
+                  <span className="inline-block text-xs font-bold text-slate-800 bg-aqua-50 px-3 py-1 rounded-xl border border-aqua-200">
                     Condition: {item.condition}
                   </span>
                 </div>
@@ -59,7 +59,7 @@ export default function Testimonials({ onOpenBooking }) {
               {/* Patient Footer info */}
               <div className="mt-6 pt-4 border-t border-slate-100 flex flex-wrap items-center justify-between gap-3">
                 <div>
-                  <h4 className="font-extrabold text-navy-950 text-sm sm:text-base font-heading">
+                  <h4 className="font-extrabold text-slate-900 text-sm sm:text-base font-heading">
                     {item.patientName}
                   </h4>
                   <span className="text-xs text-slate-500 font-medium">
@@ -68,8 +68,8 @@ export default function Testimonials({ onOpenBooking }) {
                 </div>
 
                 <div>
-                  <span className="text-xs font-bold text-emerald-800 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200 flex items-center gap-1.5">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
+                  <span className="text-xs font-bold text-aqua-800 bg-aqua-50 px-3 py-1 rounded-full border border-aqua-200 flex items-center gap-1.5">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-aqua-600" />
                     {item.recoveryHighlight}
                   </span>
                 </div>
@@ -81,8 +81,8 @@ export default function Testimonials({ onOpenBooking }) {
 
         {/* Clinical Assurance Strip */}
         <div className="mt-14 text-center">
-          <div className="inline-flex flex-wrap items-center justify-center gap-3 bg-blush-50 px-6 py-3.5 rounded-2xl border border-blush-200 text-xs sm:text-sm font-semibold text-navy-950 shadow-2xs">
-            <span className="flex items-center gap-1.5 text-emerald-700 font-bold">
+          <div className="inline-flex flex-wrap items-center justify-center gap-3 bg-[#F7F9FA] px-6 py-3.5 rounded-2xl border border-slate-200 text-xs sm:text-sm font-semibold text-slate-900 shadow-2xs">
+            <span className="flex items-center gap-1.5 text-aqua-700 font-bold">
               <CheckCircle2 className="w-4 h-4" /> 100% Verified Clinical Reviews
             </span>
             <span className="text-slate-300">•</span>
@@ -90,7 +90,7 @@ export default function Testimonials({ onOpenBooking }) {
             <span className="text-slate-300">•</span>
             <button
               onClick={onOpenBooking}
-              className="text-gold-700 font-bold hover:underline"
+              className="text-aqua-700 font-bold hover:underline"
             >
               Start your recovery roadmap today →
             </button>

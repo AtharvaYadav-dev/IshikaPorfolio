@@ -10,16 +10,16 @@ export default function FaqSection() {
   };
 
   return (
-    <section className="py-16 sm:py-20 lg:py-28 bg-[#FAF7F8] border-t border-slate-100">
+    <section className="py-16 sm:py-20 lg:py-28 bg-[#F7F9FA] border-t border-slate-200/60">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blush-100 text-navy-950 text-xs font-bold uppercase tracking-wider mb-3 border border-blush-200 shadow-2xs">
-            <HelpCircle className="w-3.5 h-3.5 text-gold-600" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white text-aqua-800 text-xs font-bold uppercase tracking-wider mb-3 border border-slate-200 shadow-2xs">
+            <HelpCircle className="w-3.5 h-3.5 text-aqua-600" />
             <span>Got Questions?</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-4xl font-extrabold text-navy-950 tracking-tight font-heading">
+          <h2 className="text-3xl sm:text-4xl lg:text-4xl font-extrabold text-slate-900 tracking-tight font-heading">
             Frequently Asked Questions
           </h2>
           <p className="mt-3 text-sm sm:text-base text-slate-600 max-w-2xl mx-auto leading-relaxed">
@@ -34,22 +34,22 @@ export default function FaqSection() {
             return (
               <div
                 key={idx}
-                className="bg-white rounded-2xl border border-slate-200/90 overflow-hidden shadow-xs hover:border-blush-300 transition-all duration-200"
+                className="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-xs hover:border-aqua-300 transition-all duration-200"
               >
                 <button
                   onClick={() => toggle(idx)}
-                  className="w-full text-left p-5 sm:p-6 flex items-center justify-between gap-4 font-bold text-base sm:text-lg text-navy-950 hover:text-gold-700 transition-colors"
+                  className="w-full text-left p-5 sm:p-6 flex items-center justify-between gap-4 font-bold text-base sm:text-lg text-slate-900 hover:text-aqua-600 transition-colors"
                 >
                   <span className="leading-snug font-heading">{item.q}</span>
                   <div className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 transition-transform duration-200 ${
-                    isOpen ? 'bg-gold-100 text-gold-800 rotate-180' : 'bg-slate-100 text-slate-600'
+                    isOpen ? 'bg-aqua-50 text-aqua-700 rotate-180' : 'bg-slate-100 text-slate-600'
                   }`}>
                     <ChevronDown className="w-4 h-4" />
                   </div>
                 </button>
 
                 {isOpen && (
-                  <div className="px-5 sm:px-6 pb-6 pt-1 text-xs sm:text-sm text-slate-700 leading-relaxed border-t border-slate-100 bg-[#FCFBFB] animate-fade-in-up">
+                  <div className="px-5 sm:px-6 pb-6 pt-1 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 bg-[#FCFBFB] animate-fade-in-up">
                     <p>{item.a}</p>
                   </div>
                 )}
@@ -59,9 +59,9 @@ export default function FaqSection() {
         </div>
 
         {/* Have More Questions Helper Card */}
-        <div className="mt-14 p-6 sm:p-8 rounded-3xl bg-white border border-blush-200 shadow-soft flex flex-col sm:flex-row items-center justify-between gap-5 text-center sm:text-left">
+        <div className="mt-14 p-6 sm:p-8 rounded-3xl bg-white border border-slate-200 shadow-card flex flex-col sm:flex-row items-center justify-between gap-5 text-center sm:text-left">
           <div>
-            <h4 className="font-extrabold text-navy-950 text-base sm:text-lg font-heading">
+            <h4 className="font-extrabold text-slate-900 text-base sm:text-lg font-heading">
               Have a question not listed here?
             </h4>
             <p className="text-xs sm:text-sm text-slate-600 mt-1">
@@ -71,9 +71,9 @@ export default function FaqSection() {
           <div className="flex flex-wrap items-center justify-center gap-3">
             <a
               href={`tel:${DOCTOR_INFO.phoneRaw}`}
-              className="px-5 py-3 rounded-full font-bold text-xs sm:text-sm text-navy-950 bg-blush-100 hover:bg-blush-200 border border-blush-300 flex items-center gap-2 transition-all hover:scale-102"
+              className="px-5 py-3 rounded-full font-bold text-xs sm:text-sm text-slate-800 bg-slate-100 hover:bg-slate-200 border border-slate-200 flex items-center gap-2 transition-all hover:scale-102"
             >
-              <Phone className="w-4 h-4 text-navy-900" />
+              <Phone className="w-4 h-4 text-slate-700" />
               Call Now
             </a>
             <a

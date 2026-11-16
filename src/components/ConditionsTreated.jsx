@@ -4,16 +4,14 @@ import {
   Crosshair, 
   UserCheck, 
   ShieldAlert, 
-  Smile, 
   Brain, 
   Activity, 
   Flame, 
   HeartPulse, 
   HeartHandshake, 
-  Wind, 
-  Zap,
-  ArrowRight,
-  Filter
+  Zap, 
+  ArrowRight, 
+  Filter 
 } from 'lucide-react';
 import { CONDITIONS_TREATED } from '../data/physioData';
 
@@ -28,18 +26,16 @@ export default function ConditionsTreated({ onSelectCondition, onOpenBooking }) 
 
   const getConditionIcon = (iconName) => {
     switch (iconName) {
-      case 'Bone': return <Bone className="w-5 h-5 text-rose-500" />;
-      case 'Crosshair': return <Crosshair className="w-5 h-5 text-navy-700" />;
-      case 'UserCheck': return <UserCheck className="w-5 h-5 text-gold-600" />;
-      case 'ShieldAlert': return <ShieldAlert className="w-5 h-5 text-amber-500" />;
-      case 'Smile': return <Smile className="w-5 h-5 text-emerald-600" />;
-      case 'Brain': return <Brain className="w-5 h-5 text-purple-600" />;
+      case 'Bone': return <Bone className="w-5 h-5 text-aqua-600" />;
+      case 'Crosshair': return <Crosshair className="w-5 h-5 text-slate-700" />;
+      case 'UserCheck': return <UserCheck className="w-5 h-5 text-aqua-600" />;
+      case 'ShieldAlert': return <ShieldAlert className="w-5 h-5 text-amber-600" />;
+      case 'Brain': return <Brain className="w-5 h-5 text-indigo-600" />;
       case 'Activity': return <Activity className="w-5 h-5 text-blue-600" />;
-      case 'Flame': return <Flame className="w-5 h-5 text-orange-500" />;
-      case 'HeartPulse': return <HeartPulse className="w-5 h-5 text-rose-600" />;
-      case 'HeartHandshake': return <HeartHandshake className="w-5 h-5 text-teal-600" />;
-      case 'Wind': return <Wind className="w-5 h-5 text-sky-600" />;
-      default: return <Zap className="w-5 h-5 text-gold-600" />;
+      case 'Flame': return <Flame className="w-5 h-5 text-rose-500" />;
+      case 'HeartPulse': return <HeartPulse className="w-5 h-5 text-red-600" />;
+      case 'HeartHandshake': return <HeartHandshake className="w-5 h-5 text-emerald-600" />;
+      default: return <Zap className="w-5 h-5 text-aqua-600" />;
     }
   };
 
@@ -49,11 +45,11 @@ export default function ConditionsTreated({ onSelectCondition, onOpenBooking }) 
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blush-100 text-navy-950 text-xs font-bold uppercase tracking-wider mb-3 border border-blush-200 shadow-2xs">
-            <Filter className="w-3.5 h-3.5 text-gold-600" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-aqua-50 text-aqua-800 text-xs font-bold uppercase tracking-wider mb-3 border border-aqua-200">
+            <Filter className="w-3.5 h-3.5 text-aqua-600" />
             <span>Targeted Clinical Rehabilitation</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-4xl font-extrabold text-navy-950 tracking-tight font-heading">
+          <h2 className="text-3xl sm:text-4xl lg:text-4xl font-extrabold text-slate-900 tracking-tight font-heading">
             Conditions Treated by Dr. Ishika Gupta
           </h2>
           <p className="mt-3 text-sm sm:text-base text-slate-600 max-w-2xl mx-auto leading-relaxed">
@@ -66,13 +62,13 @@ export default function ConditionsTreated({ onSelectCondition, onOpenBooking }) 
               <button
                 key={cat}
                 onClick={() => setActiveCategory(cat)}
-                className={`px-4 sm:px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold transition-all duration-200 ${
+                className={`px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold transition-all duration-200 ${
                   activeCategory === cat
-                    ? 'btn-pill-navy scale-102'
-                    : 'bg-slate-100 text-slate-700 hover:bg-blush-100 hover:text-navy-950'
+                    ? 'btn-slate'
+                    : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
                 }`}
               >
-                {cat === 'All' ? 'All Conditions (12)' : cat === 'Other' ? 'Sports, Post-Op & Geriatric' : `${cat} Conditions`}
+                {cat === 'All' ? 'All Conditions' : cat === 'Other' ? 'Sports, Post-Op & Geriatric' : `${cat} Care`}
               </button>
             ))}
           </div>
@@ -83,11 +79,11 @@ export default function ConditionsTreated({ onSelectCondition, onOpenBooking }) 
           {filteredConditions.map((condition, idx) => (
             <div
               key={idx}
-              className="glass-card rounded-2xl p-6 flex flex-col justify-between group"
+              className="glass-card rounded-2xl p-6 flex flex-col justify-between group bg-white border border-slate-200 hover:border-aqua-400"
             >
               <div>
                 <div className="flex items-center justify-between gap-3 mb-3">
-                  <div className="w-11 h-11 rounded-xl bg-white border border-slate-200 flex items-center justify-center shadow-xs group-hover:scale-110 transition-transform">
+                  <div className="w-11 h-11 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-center shadow-xs group-hover:scale-110 transition-transform">
                     {getConditionIcon(condition.icon)}
                   </div>
                   <span className={`text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full ${
@@ -101,7 +97,7 @@ export default function ConditionsTreated({ onSelectCondition, onOpenBooking }) 
                   </span>
                 </div>
 
-                <h3 className="text-base sm:text-lg font-bold text-navy-950 tracking-tight leading-snug font-heading group-hover:text-gold-700 transition-colors">
+                <h3 className="text-base sm:text-lg font-bold text-slate-900 tracking-tight leading-snug font-heading group-hover:text-aqua-700 transition-colors">
                   {condition.title}
                 </h3>
 
@@ -109,8 +105,8 @@ export default function ConditionsTreated({ onSelectCondition, onOpenBooking }) 
                   {condition.description}
                 </p>
 
-                <div className="mt-4 p-3 rounded-xl bg-blush-50/70 border border-blush-200/80 text-[11px] text-slate-700 leading-relaxed">
-                  <strong className="text-navy-950 font-bold block mb-0.5">Common Symptoms:</strong>
+                <div className="mt-4 p-3 rounded-xl bg-slate-50 border border-slate-200 text-[11px] text-slate-700 leading-relaxed">
+                  <strong className="text-slate-900 font-bold block mb-0.5">Common Symptoms:</strong>
                   {condition.commonSymptoms}
                 </div>
               </div>
@@ -124,7 +120,7 @@ export default function ConditionsTreated({ onSelectCondition, onOpenBooking }) 
                     if (onSelectCondition) onSelectCondition(condition.title);
                     onOpenBooking();
                   }}
-                  className="font-bold text-navy-950 hover:text-gold-600 flex items-center gap-1 transition-colors"
+                  className="font-bold text-slate-900 hover:text-aqua-600 flex items-center gap-1 transition-colors"
                 >
                   <span>Book Care</span>
                   <ArrowRight className="w-3.5 h-3.5" />
@@ -135,9 +131,9 @@ export default function ConditionsTreated({ onSelectCondition, onOpenBooking }) 
         </div>
 
         {/* Doctor Consultation Banner */}
-        <div className="mt-14 p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-blush-100/80 via-white to-blush-100/80 border border-blush-300 flex flex-col sm:flex-row items-center justify-between gap-5 shadow-soft">
+        <div className="mt-14 p-6 sm:p-8 rounded-3xl bg-[#F7F9FA] border border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-5">
           <div className="text-center sm:text-left">
-            <h4 className="font-extrabold text-navy-950 text-base sm:text-lg font-heading">
+            <h4 className="font-extrabold text-slate-900 text-base sm:text-lg font-heading">
               Not sure which therapy your condition requires?
             </h4>
             <p className="text-xs sm:text-sm text-slate-600 mt-1">
@@ -146,7 +142,7 @@ export default function ConditionsTreated({ onSelectCondition, onOpenBooking }) 
           </div>
           <button
             onClick={onOpenBooking}
-            className="btn-pill-gold px-6 py-3 text-xs sm:text-sm shrink-0"
+            className="btn-aqua px-6 py-3 text-xs sm:text-sm shrink-0"
           >
             Consult With Doctor Now
           </button>

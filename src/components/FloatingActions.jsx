@@ -24,11 +24,11 @@ export default function FloatingActions({ onOpenBooking }) {
         {showScrollTop && (
           <button
             onClick={scrollToTop}
-            className="w-12 h-12 rounded-full bg-white text-navy-950 shadow-float border border-slate-200 flex items-center justify-center hover:bg-slate-50 transition-all transform hover:-translate-y-1"
+            className="w-12 h-12 rounded-full bg-white text-slate-800 shadow-float border border-slate-200 flex items-center justify-center hover:bg-slate-50 transition-all transform hover:-translate-y-1"
             title="Scroll to Top"
             aria-label="Scroll to top"
           >
-            <ArrowUp className="w-5 h-5 text-navy-800" />
+            <ArrowUp className="w-5 h-5 text-slate-800" />
           </button>
         )}
 
@@ -40,31 +40,31 @@ export default function FloatingActions({ onOpenBooking }) {
           title="Chat on WhatsApp"
         >
           <MessageCircle className="w-7 h-7" />
-          <span className="absolute right-16 top-3 bg-navy-950 text-white text-xs font-bold px-3 py-1.5 rounded-xl shadow-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+          <span className="absolute right-16 top-3 bg-slate-900 text-white text-xs font-bold px-3 py-1.5 rounded-xl shadow-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
             Chat with Dr. Ishika
           </span>
         </a>
 
         <button
           onClick={onOpenBooking}
-          className="w-14 h-14 rounded-full btn-pill-gold shadow-float flex items-center justify-center transition-all transform hover:scale-110 group relative"
+          className="w-14 h-14 rounded-full btn-aqua shadow-float flex items-center justify-center transition-all transform hover:scale-110 group relative"
           title="Book Home Visit"
         >
-          <Calendar className="w-6 h-6 text-navy-950" />
-          <span className="absolute right-16 top-3 bg-navy-950 text-white text-xs font-bold px-3 py-1.5 rounded-xl shadow-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+          <Calendar className="w-6 h-6 text-white" />
+          <span className="absolute right-16 top-3 bg-slate-900 text-white text-xs font-bold px-3 py-1.5 rounded-xl shadow-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
             Request Home Visit
           </span>
         </button>
       </div>
 
       {/* Mobile Bottom Fixed Bar */}
-      <div className="lg:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-t border-blush-200 shadow-float px-3 py-2.5">
+      <div className="lg:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-t border-slate-200 shadow-float px-3 py-2.5">
         <div className="grid grid-cols-3 gap-2">
           <a
             href={`tel:${DOCTOR_INFO.phoneRaw}`}
-            className="flex items-center justify-center gap-1.5 py-3 px-2 rounded-full bg-blush-100 text-navy-950 font-bold text-xs border border-blush-300"
+            className="flex items-center justify-center gap-1.5 py-3 px-2 rounded-full bg-slate-100 text-slate-900 font-bold text-xs border border-slate-200"
           >
-            <Phone className="w-3.5 h-3.5 text-navy-900" />
+            <Phone className="w-3.5 h-3.5 text-slate-800" />
             <span>Call</span>
           </a>
 
@@ -80,7 +80,7 @@ export default function FloatingActions({ onOpenBooking }) {
 
           <button
             onClick={onOpenBooking}
-            className="flex items-center justify-center gap-1.5 py-3 px-2 rounded-full btn-pill-gold text-xs shadow-xs"
+            className="flex items-center justify-center gap-1.5 py-3 px-2 rounded-full btn-aqua text-xs shadow-xs"
           >
             <Calendar className="w-3.5 h-3.5" />
             <span>Book Visit</span>
