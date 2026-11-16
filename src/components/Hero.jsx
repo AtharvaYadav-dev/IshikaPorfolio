@@ -7,89 +7,85 @@ import {
   Star, 
   Award, 
   CheckCircle2, 
-  Clock, 
   Home, 
-  HeartHandshake,
-  Activity,
+  Sparkles,
   UserCheck,
-  Sparkles
+  Activity,
+  HeartHandshake
 } from 'lucide-react';
 import { DOCTOR_INFO } from '../data/physioData';
 
 export default function Hero({ onOpenBooking }) {
   return (
-    <section id="home" className="relative overflow-hidden pt-8 pb-16 lg:py-20 bg-gradient-to-b from-blush-50 via-white to-[#FAF7F7] subtle-grid-bg">
-      {/* Soft decorative background glow circles */}
-      <div className="absolute top-0 right-0 -mr-24 -mt-24 w-96 h-96 rounded-full bg-blush-200/60 blur-3xl pointer-events-none"></div>
-      <div className="absolute bottom-10 left-0 -ml-20 w-80 h-80 rounded-full bg-sage-100/50 blur-3xl pointer-events-none"></div>
-
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+    <section id="home" className="relative overflow-hidden hero-gradient-mesh pt-8 pb-16 sm:pt-12 sm:pb-20 lg:pt-16 lg:pb-24 border-b border-blush-200/70">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        {/* Main 2-Column Responsive Layout using CSS Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           
-          {/* Left Column: Headlines & Call to Actions */}
+          {/* Left Column: Headlines, Value Prop & CTAs */}
           <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
             
-            {/* Top Doctor Badge & Registration */}
-            <div className="inline-flex flex-wrap items-center justify-center lg:justify-start gap-2 bg-white px-3.5 py-1.5 rounded-full shadow-sm border border-blush-200 text-xs text-navy-900 font-medium">
-              <span className="flex items-center gap-1.5 text-navy-800 font-bold">
-                <Award className="w-4 h-4 text-gold-500" />
+            {/* Council Verification Pill */}
+            <div className="inline-flex flex-wrap items-center justify-center lg:justify-start gap-2 bg-white/90 backdrop-blur-md px-4 py-1.5 rounded-full shadow-sm border border-blush-200 text-xs text-navy-900 font-semibold">
+              <span className="flex items-center gap-1.5 text-navy-950 font-bold">
+                <Award className="w-4 h-4 text-gold-600" />
                 {DOCTOR_INFO.degrees}
               </span>
               <span className="text-slate-300">•</span>
-              <span className="text-slate-600 flex items-center gap-1">
+              <span className="text-slate-700 flex items-center gap-1.5 font-medium">
                 <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" />
-                Reg. No.: 2023/12345 (Maharashtra OTPT Council)
+                Maharashtra OTPT Reg. No.: 2023/12345
               </span>
             </div>
 
             {/* Main Headline */}
-            <div className="space-y-3">
+            <div className="space-y-2">
               <div className="text-xs sm:text-sm font-extrabold uppercase tracking-widest text-gold-600 flex items-center justify-center lg:justify-start gap-2">
-                <Sparkles className="w-4 h-4" />
-                <span>Evidence-Based Rehabilitation</span>
+                <Sparkles className="w-4 h-4 text-gold-500" />
+                <span>Evidence-Based Physiotherapy Care</span>
               </div>
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-extrabold text-navy-900 tracking-tight leading-[1.15]">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-extrabold text-navy-950 tracking-tight leading-[1.18] font-heading">
                 {DOCTOR_INFO.name}
-                <span className="block text-xl sm:text-2xl md:text-3xl font-semibold text-navy-700 mt-2 font-heading">
+                <span className="block text-xl sm:text-2xl md:text-3xl font-bold text-navy-700 mt-2 font-heading">
                   {DOCTOR_INFO.title}
                 </span>
               </h1>
             </div>
 
-            {/* Sub-headline / Tagline */}
-            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-2 sm:gap-4 text-lg sm:text-xl font-bold">
-              <span className="text-gold-600 bg-gold-50 px-3 py-1 rounded-lg border border-gold-200 shadow-xs">
+            {/* Tagline Pills */}
+            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2 sm:gap-3 text-sm sm:text-base font-bold">
+              <span className="text-gold-700 bg-gold-50/90 px-3.5 py-1.5 rounded-full border border-gold-300/80 shadow-xs">
                 "{DOCTOR_INFO.primaryTagline}"
               </span>
-              <span className="hidden sm:inline text-slate-300">•</span>
-              <span className="text-navy-800 text-base font-semibold">
+              <span className="hidden sm:inline text-slate-400">•</span>
+              <span className="text-navy-900 bg-white/80 px-3.5 py-1.5 rounded-full border border-blush-200 shadow-xs font-semibold">
                 {DOCTOR_INFO.secondaryTagline}
               </span>
             </div>
 
-            {/* Short Intro Text */}
-            <p className="text-base sm:text-lg text-slate-700 leading-relaxed max-w-2xl mx-auto lg:mx-0">
-              Personalized, evidence-based physiotherapy delivered right in the comfort of your home. 
-              Recover from acute joint and spine pain, restore functional mobility, and rebuild post-surgery strength 
-              with dedicated 1-on-1 clinical care—<strong className="text-navy-900 font-semibold">without the stress of hospital commutes</strong>.
+            {/* Short Intro Text with Enhanced Line Height */}
+            <p className="text-sm sm:text-base md:text-lg text-slate-700 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+              Personalized, evidence-based physiotherapy delivered directly in the comfort of your home. 
+              Recover from acute joint, spine, and muscle pain, restore functional mobility, and rebuild strength after surgery—<strong className="text-navy-950 font-bold">with dedicated 1-on-1 bedside clinical care and zero hospital commute stress</strong>.
             </p>
 
-            {/* Service Areas Pill */}
-            <div className="p-3.5 bg-blush-100/70 border border-blush-200 rounded-xl text-xs sm:text-sm text-navy-900 flex flex-col sm:flex-row items-center gap-2 max-w-xl mx-auto lg:mx-0">
-              <div className="flex items-center gap-1.5 font-bold text-navy-950 whitespace-nowrap">
+            {/* Service Areas Banner */}
+            <div className="p-3.5 sm:p-4 bg-white/95 backdrop-blur-md border border-blush-200/90 rounded-2xl text-xs sm:text-sm text-navy-900 flex flex-col sm:flex-row items-center gap-2 max-w-xl mx-auto lg:mx-0 shadow-xs">
+              <div className="flex items-center gap-1.5 font-extrabold text-navy-950 whitespace-nowrap">
                 <MapPin className="w-4 h-4 text-rose-500 shrink-0" />
                 Home Visits Available In:
               </div>
-              <div className="text-slate-700 font-medium">
+              <div className="text-slate-700 font-semibold text-center sm:text-left">
                 Sakinaka • Ghatkopar West • Kurla West • Vidyavihar
               </div>
             </div>
 
-            {/* CTA Buttons */}
+            {/* Catchy Pill CTA Buttons with Hover Glow */}
             <div className="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3.5">
               <button
                 onClick={onOpenBooking}
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-xl font-bold text-base text-navy-950 bg-gradient-to-r from-gold-400 via-gold-500 to-gold-400 hover:from-gold-500 hover:to-gold-600 shadow-gold transition-all duration-200 transform hover:-translate-y-0.5 focus:outline-none"
+                className="w-full sm:w-auto btn-pill-gold px-7 py-4 text-sm sm:text-base flex items-center justify-center gap-2.5"
               >
                 <span>Request a Home Visit</span>
                 <ArrowRight className="w-4 h-4 text-navy-950" />
@@ -97,74 +93,75 @@ export default function Hero({ onOpenBooking }) {
 
               <a
                 href={`tel:${DOCTOR_INFO.phoneRaw}`}
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl font-bold text-base text-navy-900 bg-white hover:bg-blush-50 border border-navy-800/15 shadow-sm transition-colors"
+                className="w-full sm:w-auto btn-pill-navy px-6 py-4 text-sm sm:text-base flex items-center justify-center gap-2"
               >
-                <Phone className="w-4 h-4 text-emerald-600" />
+                <Phone className="w-4 h-4 text-gold-400" />
                 <span>Call: {DOCTOR_INFO.phone}</span>
               </a>
             </div>
 
-            {/* Trust Points Mini Grid */}
-            <div className="pt-4 grid grid-cols-2 sm:grid-cols-4 gap-3 text-left">
-              <div className="flex items-start gap-2 bg-white/80 p-2.5 rounded-lg border border-slate-100 shadow-2xs">
-                <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-                <span className="text-xs font-semibold text-navy-900 leading-tight">1-on-1 Dedicated Time</span>
+            {/* Trust Points Responsive Grid */}
+            <div className="pt-2 grid grid-cols-2 sm:grid-cols-4 gap-2.5 text-left">
+              <div className="bg-white/90 p-2.5 rounded-xl border border-blush-200/60 shadow-xs flex items-center gap-2">
+                <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+                <span className="text-xs font-bold text-navy-950 leading-tight">1-on-1 Dedicated Time</span>
               </div>
-              <div className="flex items-start gap-2 bg-white/80 p-2.5 rounded-lg border border-slate-100 shadow-2xs">
-                <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-                <span className="text-xs font-semibold text-navy-900 leading-tight">Sanitized Portable Modalities</span>
+              <div className="bg-white/90 p-2.5 rounded-xl border border-blush-200/60 shadow-xs flex items-center gap-2">
+                <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+                <span className="text-xs font-bold text-navy-950 leading-tight">Sanitized Portable Gear</span>
               </div>
-              <div className="flex items-start gap-2 bg-white/80 p-2.5 rounded-lg border border-slate-100 shadow-2xs">
-                <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-                <span className="text-xs font-semibold text-navy-900 leading-tight">Customized Rehab Roadmap</span>
+              <div className="bg-white/90 p-2.5 rounded-xl border border-blush-200/60 shadow-xs flex items-center gap-2">
+                <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+                <span className="text-xs font-bold text-navy-950 leading-tight">Customized Roadmaps</span>
               </div>
-              <div className="flex items-start gap-2 bg-white/80 p-2.5 rounded-lg border border-slate-100 shadow-2xs">
-                <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-                <span className="text-xs font-semibold text-navy-900 leading-tight">Official Claim Receipts</span>
+              <div className="bg-white/90 p-2.5 rounded-xl border border-blush-200/60 shadow-xs flex items-center gap-2">
+                <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+                <span className="text-xs font-bold text-navy-950 leading-tight">Official Claim Receipts</span>
               </div>
             </div>
 
           </div>
 
-          {/* Right Column: High-Conversion Clinical Card */}
+          {/* Right Column: Modern Glassmorphic Clinical Card with Clean Natural Flow */}
           <div className="lg:col-span-5">
-            <div className="relative mx-auto max-w-md lg:max-w-none">
+            <div className="w-full max-w-md mx-auto space-y-4">
               
-              {/* Main Card with Medical Framing */}
-              <div className="bg-white rounded-3xl shadow-card border border-blush-200 overflow-hidden relative">
+              {/* Doctor Card */}
+              <div className="bg-white/95 backdrop-blur-lg rounded-3xl shadow-card border border-blush-200 overflow-hidden">
                 
-                {/* Header banner */}
-                <div className="bg-gradient-to-r from-navy-900 via-navy-800 to-navy-900 p-6 text-white relative">
+                {/* Card Header */}
+                <div className="bg-gradient-to-r from-navy-950 via-navy-900 to-navy-950 p-6 text-white">
                   <div className="flex items-center justify-between">
                     <span className="inline-flex items-center gap-1.5 bg-gold-500/20 text-gold-300 text-xs font-bold px-3 py-1 rounded-full border border-gold-400/30 uppercase tracking-wide">
-                      <Home className="w-3.5 h-3.5" /> Home Visit Physiotherapy
+                      <Home className="w-3.5 h-3.5 text-gold-400" />
+                      Home Visit Physiotherapy
                     </span>
-                    <span className="text-xs text-slate-300 flex items-center gap-1">
+                    <span className="text-xs text-slate-300 flex items-center gap-1 font-semibold">
                       <Star className="w-3.5 h-3.5 fill-gold-400 text-gold-400" />
                       5.0 (120+ Reviews)
                     </span>
                   </div>
 
-                  <h3 className="text-xl font-bold mt-4 font-heading text-white">
+                  <h3 className="text-xl font-extrabold mt-3 font-heading text-white">
                     Clinical Care At Your Doorstep
                   </h3>
-                  <p className="text-xs text-slate-300 mt-1">
+                  <p className="text-xs text-slate-300 mt-1 leading-relaxed">
                     "Home Visit Physiotherapy at your comfort, for your recovery."
                   </p>
                 </div>
 
-                {/* Card Body with Key Highlights */}
+                {/* Card Body */}
                 <div className="p-6 space-y-5">
                   
-                  {/* Doctor Profile Mini Snippet */}
+                  {/* Doctor Profile Snippet */}
                   <div className="flex items-center gap-4 pb-4 border-b border-slate-100">
-                    <div className="w-14 h-14 rounded-2xl bg-gradient-to-tr from-navy-900 to-navy-700 flex items-center justify-center text-white text-lg font-extrabold shadow-md border-2 border-gold-400">
+                    <div className="w-13 h-13 rounded-2xl bg-gradient-to-tr from-navy-950 to-navy-800 flex items-center justify-center text-white text-lg font-extrabold shadow-md border-2 border-gold-400 shrink-0">
                       IG
                     </div>
                     <div>
-                      <h4 className="font-bold text-navy-950 text-base">Dr. Ishika Gupta</h4>
-                      <p className="text-xs text-gold-700 font-semibold">Consultant Physiotherapist • BPT</p>
-                      <p className="text-xs text-slate-500 mt-0.5">Maharashtra OTPT Reg. 2023/12345</p>
+                      <h4 className="font-extrabold text-navy-950 text-base">Dr. Ishika Gupta</h4>
+                      <p className="text-xs text-gold-700 font-bold">Consultant Physiotherapist • BPT</p>
+                      <p className="text-xs text-slate-500 mt-0.5">Maharashtra OTPT Reg. No.: 2023/12345</p>
                     </div>
                   </div>
 
@@ -175,32 +172,28 @@ export default function Hero({ onOpenBooking }) {
                     </div>
 
                     <div className="space-y-2.5">
-                      <div className="flex items-start gap-2.5 text-xs text-slate-700">
-                        <div className="w-5 h-5 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0 mt-0.5 font-bold">✓</div>
+                      <div className="flex items-start gap-2.5 text-xs text-slate-700 leading-relaxed">
+                        <div className="w-5 h-5 rounded-full bg-emerald-50 text-emerald-700 flex items-center justify-center shrink-0 mt-0.5 font-bold border border-emerald-200">✓</div>
                         <span><strong>Zero Painful Commutes:</strong> Avoid traveling with acute back pain, frozen shoulder, or post-surgery joints.</span>
                       </div>
-                      <div className="flex items-start gap-2.5 text-xs text-slate-700">
-                        <div className="w-5 h-5 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0 mt-0.5 font-bold">✓</div>
+                      <div className="flex items-start gap-2.5 text-xs text-slate-700 leading-relaxed">
+                        <div className="w-5 h-5 rounded-full bg-emerald-50 text-emerald-700 flex items-center justify-center shrink-0 mt-0.5 font-bold border border-emerald-200">✓</div>
                         <span><strong>Advanced Portable Equipment:</strong> Ultrasound, TENS, IFT, cupping, and taping brought directly to you.</span>
                       </div>
-                      <div className="flex items-start gap-2.5 text-xs text-slate-700">
-                        <div className="w-5 h-5 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0 mt-0.5 font-bold">✓</div>
+                      <div className="flex items-start gap-2.5 text-xs text-slate-700 leading-relaxed">
+                        <div className="w-5 h-5 rounded-full bg-emerald-50 text-emerald-700 flex items-center justify-center shrink-0 mt-0.5 font-bold border border-emerald-200">✓</div>
                         <span><strong>Real Environment Training:</strong> Gait training on your stairs, bed transfers, and posture assessment at your home desk.</span>
-                      </div>
-                      <div className="flex items-start gap-2.5 text-xs text-slate-700">
-                        <div className="w-5 h-5 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0 mt-0.5 font-bold">✓</div>
-                        <span><strong>Family Member Inclusion:</strong> Clear instructions and home exercise regimens demonstrated to caregivers.</span>
                       </div>
                     </div>
                   </div>
 
-                  {/* Direct Action Box */}
+                  {/* Direct Action Button */}
                   <div className="pt-2">
                     <button
                       onClick={onOpenBooking}
-                      className="w-full py-3.5 px-4 rounded-xl font-bold text-sm text-navy-950 bg-gradient-to-r from-gold-400 to-gold-500 hover:from-gold-500 hover:to-gold-600 shadow-md flex items-center justify-center gap-2 transition-all transform hover:scale-[1.01]"
+                      className="w-full btn-pill-gold py-3.5 text-sm flex items-center justify-center gap-2"
                     >
-                      <Activity className="w-4 h-4" />
+                      <Activity className="w-4 h-4 text-navy-950" />
                       <span>Book Initial Home Consultation</span>
                     </button>
                     <p className="text-center text-[11px] text-slate-500 mt-2">
@@ -210,32 +203,38 @@ export default function Hero({ onOpenBooking }) {
 
                 </div>
 
-                {/* Footer badge */}
-                <div className="bg-blush-50 px-6 py-3 border-t border-blush-200 flex items-center justify-between text-xs text-navy-900 font-medium">
+                {/* Card Footer Badge */}
+                <div className="bg-blush-50/80 px-6 py-3 border-t border-blush-200 flex items-center justify-between text-xs text-navy-950 font-semibold">
                   <span className="flex items-center gap-1.5 text-slate-700">
                     <MapPin className="w-3.5 h-3.5 text-rose-500" />
                     Covering Sakinaka, Ghatkopar, Kurla & Vidyavihar
                   </span>
-                  <span className="font-bold text-emerald-700">Fast Arrival</span>
+                  <span className="font-bold text-emerald-700">Prompt Arrival</span>
                 </div>
 
               </div>
 
-              {/* Floating Stat Pill Left */}
-              <div className="hidden sm:flex items-center gap-3 absolute -bottom-6 -left-6 bg-white p-3.5 rounded-2xl shadow-float border border-blush-200">
-                <div className="w-10 h-10 rounded-xl bg-sage-50 text-sage-700 flex items-center justify-center">
-                  <UserCheck className="w-5 h-5 text-emerald-700" />
+              {/* Recovery Proof Pill - Naturally flow below the card, no overlapping absolute offsets */}
+              <div className="bg-white/95 backdrop-blur-md p-3.5 rounded-2xl shadow-soft border border-blush-200 flex items-center justify-between gap-3">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center border border-emerald-200 shrink-0">
+                    <UserCheck className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <div className="text-xs font-extrabold text-navy-950">1,200+ Patient Recoveries</div>
+                    <div className="text-[11px] text-slate-500">Orthopedic & Neurological Care</div>
+                  </div>
                 </div>
-                <div>
-                  <div className="text-xs font-bold text-navy-950">1,200+ Recoveries</div>
-                  <div className="text-[10px] text-slate-500 font-medium">Ortho & Neuro Patients</div>
-                </div>
+                <span className="text-[11px] font-bold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-200">
+                  99.4% Success
+                </span>
               </div>
 
             </div>
           </div>
 
         </div>
+
       </div>
     </section>
   );

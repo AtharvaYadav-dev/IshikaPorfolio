@@ -8,7 +8,7 @@ export default function TrustStats() {
       value: "Reg. 2023/12345",
       subtitle: "Maharashtra State OTPT Council",
       icon: ShieldCheck,
-      color: "text-emerald-600 bg-emerald-50 border-emerald-200"
+      color: "text-emerald-700 bg-emerald-50 border-emerald-200"
     },
     {
       title: "Patients Recovered",
@@ -34,24 +34,24 @@ export default function TrustStats() {
   ];
 
   return (
-    <section className="bg-white border-y border-blush-200 py-8 shadow-xs">
+    <section className="bg-white py-10 border-b border-blush-200/60">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {highlights.map((item, idx) => {
             const IconComponent = item.icon;
             return (
               <div 
                 key={idx} 
-                className="p-4 sm:p-5 rounded-2xl bg-[#FCFBFB] border border-slate-100 hover:border-blush-300 transition-all duration-200 hover:shadow-soft flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-3.5"
+                className="glass-card p-5 rounded-2xl flex items-center gap-4 text-left group"
               >
-                <div className={`w-12 h-12 rounded-xl flex items-center justify-center shrink-0 border ${item.color}`}>
+                <div className={`w-13 h-13 rounded-2xl flex items-center justify-center shrink-0 border ${item.color} group-hover:scale-110 transition-transform duration-200`}>
                   <IconComponent className="w-6 h-6" />
                 </div>
                 <div>
-                  <div className="text-lg sm:text-xl font-extrabold text-navy-950 tracking-tight leading-tight">
+                  <div className="text-xl font-extrabold text-navy-950 tracking-tight leading-tight">
                     {item.value}
                   </div>
-                  <div className="text-xs font-bold text-navy-700 mt-0.5">
+                  <div className="text-xs font-bold text-navy-800 mt-0.5">
                     {item.title}
                   </div>
                   <div className="text-[11px] text-slate-500 font-medium">

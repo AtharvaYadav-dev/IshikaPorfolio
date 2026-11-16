@@ -12,7 +12,6 @@ import {
   HeartHandshake, 
   Wind, 
   Zap,
-  CheckCircle2,
   ArrowRight,
   Filter
 } from 'lucide-react';
@@ -45,32 +44,32 @@ export default function ConditionsTreated({ onSelectCondition, onOpenBooking }) 
   };
 
   return (
-    <section id="conditions" className="py-16 lg:py-24 bg-white relative">
+    <section id="conditions" className="py-16 sm:py-20 lg:py-28 bg-white relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-10">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blush-100 text-navy-900 text-xs font-bold uppercase tracking-wider mb-3 border border-blush-200">
+        <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blush-100 text-navy-950 text-xs font-bold uppercase tracking-wider mb-3 border border-blush-200 shadow-2xs">
             <Filter className="w-3.5 h-3.5 text-gold-600" />
             <span>Targeted Clinical Rehabilitation</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-navy-900 tracking-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-4xl font-extrabold text-navy-950 tracking-tight font-heading">
             Conditions Treated by Dr. Ishika Gupta
           </h2>
-          <p className="mt-3 text-base text-slate-600">
-            Every condition requires a distinct clinical roadmap. Explore the specialized conditions we treat with home-based evidence-backed protocols.
+          <p className="mt-3 text-sm sm:text-base text-slate-600 max-w-2xl mx-auto leading-relaxed">
+            Every clinical condition requires a distinct evidence-based recovery plan. Explore the conditions we rehabilitate in the comfort of your home.
           </p>
 
-          {/* Filter Pills */}
+          {/* Interactive Filter Pills */}
           <div className="flex flex-wrap items-center justify-center gap-2 mt-8">
             {categories.map((cat) => (
               <button
                 key={cat}
                 onClick={() => setActiveCategory(cat)}
-                className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all duration-200 ${
+                className={`px-4 sm:px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold transition-all duration-200 ${
                   activeCategory === cat
-                    ? 'bg-navy-900 text-white shadow-md scale-105'
-                    : 'bg-slate-100 text-slate-700 hover:bg-blush-100 hover:text-navy-900'
+                    ? 'btn-pill-navy scale-102'
+                    : 'bg-slate-100 text-slate-700 hover:bg-blush-100 hover:text-navy-950'
                 }`}
               >
                 {cat === 'All' ? 'All Conditions (12)' : cat === 'Other' ? 'Sports, Post-Op & Geriatric' : `${cat} Conditions`}
@@ -79,16 +78,16 @@ export default function ConditionsTreated({ onSelectCondition, onOpenBooking }) 
           </div>
         </div>
 
-        {/* Conditions Grid */}
+        {/* Responsive Grid: 1-col on Mobile (<768px), 2-col on Tablet (768px - 1024px), 3-col on Desktop (>1024px) */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredConditions.map((condition, idx) => (
             <div
               key={idx}
-              className="p-6 rounded-2xl bg-[#FCFBFB] border border-slate-200/90 hover:border-gold-300 shadow-xs hover:shadow-card transition-all duration-300 flex flex-col justify-between group"
+              className="glass-card rounded-2xl p-6 flex flex-col justify-between group"
             >
               <div>
                 <div className="flex items-center justify-between gap-3 mb-3">
-                  <div className="w-10 h-10 rounded-xl bg-white border border-slate-200 flex items-center justify-center shadow-xs group-hover:scale-110 transition-transform">
+                  <div className="w-11 h-11 rounded-xl bg-white border border-slate-200 flex items-center justify-center shadow-xs group-hover:scale-110 transition-transform">
                     {getConditionIcon(condition.icon)}
                   </div>
                   <span className={`text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full ${
@@ -102,22 +101,22 @@ export default function ConditionsTreated({ onSelectCondition, onOpenBooking }) 
                   </span>
                 </div>
 
-                <h3 className="text-base sm:text-lg font-bold text-navy-950 tracking-tight leading-snug group-hover:text-gold-700 transition-colors">
+                <h3 className="text-base sm:text-lg font-bold text-navy-950 tracking-tight leading-snug font-heading group-hover:text-gold-700 transition-colors">
                   {condition.title}
                 </h3>
 
-                <p className="text-xs text-slate-600 mt-2.5 leading-relaxed">
+                <p className="text-xs sm:text-sm text-slate-600 mt-2.5 leading-relaxed">
                   {condition.description}
                 </p>
 
-                <div className="mt-4 p-2.5 rounded-xl bg-blush-50/60 border border-blush-200/70 text-[11px] text-slate-700">
-                  <strong className="text-navy-900 font-semibold block mb-0.5">Common Symptoms:</strong>
+                <div className="mt-4 p-3 rounded-xl bg-blush-50/70 border border-blush-200/80 text-[11px] text-slate-700 leading-relaxed">
+                  <strong className="text-navy-950 font-bold block mb-0.5">Common Symptoms:</strong>
                   {condition.commonSymptoms}
                 </div>
               </div>
 
-              <div className="pt-4 mt-4 border-t border-slate-200/60 flex items-center justify-between text-xs">
-                <span className="text-[11px] text-slate-500 font-medium">
+              <div className="pt-4 mt-4 border-t border-slate-100 flex items-center justify-between text-xs">
+                <span className="text-[11px] text-slate-500 font-semibold">
                   Evidence-based protocol
                 </span>
                 <button
@@ -125,7 +124,7 @@ export default function ConditionsTreated({ onSelectCondition, onOpenBooking }) 
                     if (onSelectCondition) onSelectCondition(condition.title);
                     onOpenBooking();
                   }}
-                  className="font-bold text-navy-900 hover:text-gold-600 flex items-center gap-1 transition-colors"
+                  className="font-bold text-navy-950 hover:text-gold-600 flex items-center gap-1 transition-colors"
                 >
                   <span>Book Care</span>
                   <ArrowRight className="w-3.5 h-3.5" />
@@ -135,17 +134,19 @@ export default function ConditionsTreated({ onSelectCondition, onOpenBooking }) 
           ))}
         </div>
 
-        {/* Need help deciding box */}
-        <div className="mt-12 p-6 rounded-2xl bg-gradient-to-r from-blush-100/80 via-white to-blush-100/80 border border-blush-300 flex flex-col sm:flex-row items-center justify-between gap-4">
+        {/* Doctor Consultation Banner */}
+        <div className="mt-14 p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-blush-100/80 via-white to-blush-100/80 border border-blush-300 flex flex-col sm:flex-row items-center justify-between gap-5 shadow-soft">
           <div className="text-center sm:text-left">
-            <h4 className="font-bold text-navy-950 text-base">Not sure which therapy your condition requires?</h4>
-            <p className="text-xs text-slate-600 mt-0.5">
-              Speak directly with Dr. Ishika Gupta for a clinical pre-assessment and guidance.
+            <h4 className="font-extrabold text-navy-950 text-base sm:text-lg font-heading">
+              Not sure which therapy your condition requires?
+            </h4>
+            <p className="text-xs sm:text-sm text-slate-600 mt-1">
+              Speak directly with Dr. Ishika Gupta for clinical guidance tailored to your medical history.
             </p>
           </div>
           <button
-            onClick={() => onOpenBooking()}
-            className="whitespace-nowrap px-5 py-2.5 rounded-xl font-bold text-xs text-navy-950 bg-gold-400 hover:bg-gold-500 shadow-sm transition-colors"
+            onClick={onOpenBooking}
+            className="btn-pill-gold px-6 py-3 text-xs sm:text-sm shrink-0"
           >
             Consult With Doctor Now
           </button>

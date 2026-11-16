@@ -1,12 +1,10 @@
 import React, { useState } from 'react';
 import { 
   MapPin, 
-  CheckCircle2, 
   Clock, 
   Search, 
   Navigation, 
   Phone, 
-  ShieldCheck,
   ArrowRight,
   Sparkles
 } from 'lucide-react';
@@ -56,24 +54,24 @@ export default function ServiceAreas({ onSelectArea, onOpenBooking }) {
   };
 
   return (
-    <section id="service-areas" className="py-16 lg:py-24 bg-white relative">
+    <section id="service-areas" className="py-16 sm:py-20 lg:py-28 bg-white relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-14">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-blush-100 text-navy-900 text-xs font-bold uppercase tracking-wider mb-3 border border-blush-200">
+        <div className="text-center max-w-3xl mx-auto mb-14 sm:mb-18">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blush-100 text-navy-950 text-xs font-bold uppercase tracking-wider mb-3 border border-blush-200 shadow-2xs">
             <MapPin className="w-3.5 h-3.5 text-rose-500" />
             <span>Coverage & Accessibility</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-navy-900 tracking-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-4xl font-extrabold text-navy-950 tracking-tight font-heading">
             Home Physiotherapy Service Areas in Mumbai
           </h2>
-          <p className="mt-3 text-base text-slate-600">
+          <p className="mt-3 text-sm sm:text-base text-slate-600 max-w-2xl mx-auto leading-relaxed">
             Providing prompt, dedicated bedside physiotherapy across the following core localities in Central Mumbai:
           </p>
         </div>
 
-        {/* 4 Core Areas Cards */}
+        {/* 4 Core Areas Responsive Grid: 1-col on Mobile, 2-col on Tablet, 4-col on Desktop */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
           {DOCTOR_INFO.serviceAreas.map((area, idx) => {
             const isSelected = selectedArea.name === area.name;
@@ -84,36 +82,36 @@ export default function ServiceAreas({ onSelectArea, onOpenBooking }) {
                   setSelectedArea(area);
                   setSearchResult(null);
                 }}
-                className={`p-6 rounded-2xl border cursor-pointer transition-all duration-300 relative ${
+                className={`glass-card p-6 rounded-2xl cursor-pointer transition-all duration-300 relative ${
                   isSelected 
-                    ? 'bg-gradient-to-b from-blush-100/70 to-white border-gold-400 shadow-card ring-2 ring-gold-400/30 -translate-y-1' 
-                    : 'bg-[#FAF7F7] border-slate-200 hover:border-blush-300 shadow-2xs hover:bg-white'
+                    ? 'border-gold-500 ring-2 ring-gold-400/30 bg-blush-50/70 -translate-y-1 shadow-card' 
+                    : ''
                 }`}
               >
                 <div className="flex items-center justify-between mb-3">
-                  <div className={`w-10 h-10 rounded-xl flex items-center justify-center ${
-                    isSelected ? 'bg-navy-900 text-gold-400' : 'bg-white text-navy-900 border border-slate-200'
+                  <div className={`w-11 h-11 rounded-xl flex items-center justify-center ${
+                    isSelected ? 'bg-navy-950 text-gold-400' : 'bg-slate-100 text-navy-950'
                   }`}>
                     <MapPin className="w-5 h-5" />
                   </div>
-                  <span className="text-xs font-extrabold text-navy-800 bg-white px-2.5 py-1 rounded-lg border border-slate-200">
+                  <span className="text-xs font-extrabold text-navy-900 bg-white px-2.5 py-1 rounded-full border border-slate-200 shadow-2xs">
                     PIN: {area.pin}
                   </span>
                 </div>
 
-                <h3 className="text-xl font-extrabold text-navy-950 tracking-tight">
+                <h3 className="text-xl font-extrabold text-navy-950 tracking-tight font-heading">
                   {area.name}
                 </h3>
-                <div className="text-xs text-slate-500 font-medium mt-1">
+                <div className="text-xs text-slate-500 font-semibold mt-0.5">
                   Mumbai, Maharashtra
                 </div>
 
-                <div className="mt-4 pt-3 border-t border-slate-200/70 space-y-2 text-xs">
+                <div className="mt-4 pt-3 border-t border-slate-100 space-y-2 text-xs">
                   <div className="flex items-center gap-1.5 text-slate-600">
                     <Navigation className="w-3.5 h-3.5 text-slate-400 shrink-0" />
                     <span className="truncate">{area.landmark}</span>
                   </div>
-                  <div className="flex items-center gap-1.5 text-emerald-700 font-semibold">
+                  <div className="flex items-center gap-1.5 text-emerald-700 font-bold">
                     <Clock className="w-3.5 h-3.5 shrink-0" />
                     <span>Est. Turnaround: {area.travelTime}</span>
                   </div>
@@ -121,7 +119,7 @@ export default function ServiceAreas({ onSelectArea, onOpenBooking }) {
 
                 <div className="mt-4 pt-2">
                   <span className={`text-[11px] font-bold block ${isSelected ? 'text-gold-700' : 'text-slate-500'}`}>
-                    {isSelected ? '✓ Selected Area' : 'Click to inspect & book →'}
+                    {isSelected ? '✓ Selected Location' : 'Click to select & schedule →'}
                   </span>
                 </div>
               </div>
@@ -130,7 +128,7 @@ export default function ServiceAreas({ onSelectArea, onOpenBooking }) {
         </div>
 
         {/* Interactive Eligibility Checker Box */}
-        <div className="rounded-3xl bg-gradient-to-br from-navy-950 via-navy-900 to-navy-800 text-white p-6 sm:p-8 lg:p-10 shadow-card relative overflow-hidden">
+        <div className="rounded-3xl bg-gradient-to-br from-navy-950 via-navy-900 to-navy-950 text-white p-6 sm:p-8 lg:p-10 shadow-card border border-navy-800">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             
             <div className="lg:col-span-6 space-y-4">
@@ -158,7 +156,7 @@ export default function ServiceAreas({ onSelectArea, onOpenBooking }) {
                 </div>
                 <button
                   type="submit"
-                  className="px-6 py-3 rounded-xl font-bold text-xs sm:text-sm text-navy-950 bg-gradient-to-r from-gold-400 to-gold-500 hover:from-gold-500 hover:to-gold-600 shadow-sm transition-all"
+                  className="btn-pill-gold px-6 py-3 text-xs sm:text-sm shrink-0"
                 >
                   Check Availability
                 </button>
@@ -166,7 +164,7 @@ export default function ServiceAreas({ onSelectArea, onOpenBooking }) {
 
               {/* Dynamic Search Feedback */}
               {searchResult && (
-                <div className={`p-4 rounded-xl text-xs leading-relaxed animate-fadeIn ${
+                <div className={`p-4 rounded-xl text-xs leading-relaxed animate-fade-in-up ${
                   searchResult.status === 'success' 
                     ? 'bg-emerald-950/80 border border-emerald-500/50 text-emerald-200' 
                     : searchResult.status === 'adjacent'
@@ -202,7 +200,7 @@ export default function ServiceAreas({ onSelectArea, onOpenBooking }) {
               </div>
 
               <div className="text-xs text-slate-300">
-                <strong className="text-white">Prominent Coverage:</strong> {selectedArea.landmark} and surrounding residential societies.
+                <strong className="text-white">Coverage Note:</strong> {selectedArea.landmark} and surrounding residential societies.
               </div>
 
               <div className="pt-2 flex flex-col sm:flex-row gap-3">
@@ -211,14 +209,14 @@ export default function ServiceAreas({ onSelectArea, onOpenBooking }) {
                     if (onSelectArea) onSelectArea(selectedArea.name);
                     onOpenBooking();
                   }}
-                  className="flex-1 py-3 px-4 rounded-xl font-bold text-xs sm:text-sm text-navy-950 bg-gradient-to-r from-gold-400 to-gold-500 hover:from-gold-500 hover:to-gold-600 shadow-md flex items-center justify-center gap-1.5"
+                  className="flex-1 btn-pill-gold py-3 px-4 text-xs sm:text-sm flex items-center justify-center gap-1.5"
                 >
-                  <span>Book Home Visit in {selectedArea.name}</span>
-                  <ArrowRight className="w-4 h-4" />
+                  <span>Book Visit in {selectedArea.name}</span>
+                  <ArrowRight className="w-4 h-4 text-navy-950" />
                 </button>
                 <a
                   href={`tel:${DOCTOR_INFO.phoneRaw}`}
-                  className="py-3 px-4 rounded-xl font-bold text-xs sm:text-sm text-white bg-white/15 hover:bg-white/20 border border-white/20 flex items-center justify-center gap-1.5"
+                  className="py-3 px-4 rounded-full font-bold text-xs sm:text-sm text-white bg-white/15 hover:bg-white/20 border border-white/20 flex items-center justify-center gap-1.5"
                 >
                   <Phone className="w-3.5 h-3.5 text-gold-400" />
                   <span>Call Doctor</span>

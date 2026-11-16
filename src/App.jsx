@@ -42,7 +42,7 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#FCFCFD] text-navy-900 pb-16 lg:pb-0">
+    <div className="min-h-screen flex flex-col bg-[#FCFCFD] text-navy-950 pb-20 lg:pb-0">
       {/* Navigation Header */}
       <Navbar onOpenBooking={handleOpenBooking} />
 
